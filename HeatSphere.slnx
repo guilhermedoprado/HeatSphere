@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/backend/">
+    <Project Path="backend/HeatSphere.Api/HeatSphere.Api.csproj" />
+    <Project Path="backend/HeatSphere.Application/HeatSphere.Application.csproj" />
+    <Project Path="backend/HeatSphere.Domain/HeatSphere.Domain.csproj" />
+    <Project Path="backend/HeatSphere.Infrastructure/HeatSphere.Infrastructure.csproj" />
+  </Folder>
+</Solution>

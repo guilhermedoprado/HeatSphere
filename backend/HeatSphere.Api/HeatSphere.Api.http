@@ -1,0 +1,12 @@
+@HeatSphere_Api_HostAddress = http://localhost:8080
+
+### Rating 1-2
+POST {{HeatSphere_Api_HostAddress}}/api/heat-exchangers/shell-tube/1-2/rating
+Content-Type: application/json
+
+{
+  "thInC": 150,
+  "thOutC": 100,
+  "tcInC": 30,
+  "tcOutC": 80
+}
