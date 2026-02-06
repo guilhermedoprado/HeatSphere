@@ -1,0 +1,113 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  font-weight: bold;
+  margin-top: 0px;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 2px 8px rgba(255, 69, 0, 0.3);
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.brand {
+  display: grid;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  gap: 0.25rem;
+  margin: 0 auto;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  margin-top: 0px;
+  gap: 1.5rem;
+  font-size: 1rem;
+  flex-wrap: wrap;
+}
+
+.link {
+  color: #fff;
+  text-decoration: none;
+  opacity: 0.9;
+}
+
+.link:hover {
+  opacity: 1;
+}
+
+.menu {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* ponte de hover */
+.menu::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  height: 10px; /* área entre botão e menu */
+}
+
+.menuButton {
+  font: inherit;
+  color: #fff;
+  background: transparent;
+  border: none;
+  opacity: 0.9;
+  cursor: pointer;
+  padding: 0;
+}
+
+.menuButton:hover,
+.menuButton:focus {
+  opacity: 1;
+}
+
+.menuList {
+  position: absolute;
+  top: calc(100% + 0.2rem);
+  left: 0;
+  min-width: 220px;
+  display: grid;
+  gap: 0.25rem;
+  padding: 0.5rem;
+  background: rgba(21, 26, 34, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-6px);
+  transition: opacity 0.15s ease, transform 0.15s ease;
+  z-index: 10;
+}
+
+.menuItem {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  opacity: 0.9;
+  font-weight: 500;
+}
+
+.menuItem:hover,
+.menuItem:focus {
+  background: rgba(255, 255, 255, 0.1);
+  opacity: 1;
+}
+
+.menu:hover .menuList,
+.menu:focus-within .menuList {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}

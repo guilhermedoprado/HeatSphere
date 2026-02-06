@@ -1,0 +1,10 @@
+.container {
+  background: linear-gradient(135deg, #ff4500 0%, #ffa500 60%, #1e90ff 100%);
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.main {
+  display: grid;
+  gap: 2rem;
+}

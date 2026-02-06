@@ -1,0 +1,61 @@
+.hero {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  align-items: center;
+  background-color: white;
+}
+
+.heroContent {
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(30, 144, 255, 0.15);
+  padding: 2rem;
+  color: #1f2933;
+  margin-top: 2.0rem;
+}
+
+.cta {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+  justify-content: center;
+}
+
+.steps{
+  margin-top: 1rem;
+  padding-left: 1.5rem;
+  margin-left: 0rem;
+}
+
+.button {
+  background: linear-gradient(90deg, #ff4500 0%, #ffa500 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  text-decoration: none;
+  text-align: center;
+  align-content: center;
+}
+
+.button:hover {
+  background: linear-gradient(90deg, #ffa500 0%, #ff4500 100%);
+}
+
+.buttonSecondary {
+  background: rgba(30, 144, 255, 0.15);
+  color: #1e90ff;
+}
+
+.heroCard {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 16px rgba(30, 144, 255, 0.15);
+  color: #1f2933;
+}
