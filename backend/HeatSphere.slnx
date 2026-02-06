@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="HeatSphere.Api/HeatSphere.Api.csproj" />
+  <Project Path="HeatSphere.Application/HeatSphere.Application.csproj" />
+  <Project Path="HeatSphere.Domain/HeatSphere.Domain.csproj" />
+  <Project Path="HeatSphere.Infrastructure/HeatSphere.Infrastructure.csproj" />
+</Solution>
