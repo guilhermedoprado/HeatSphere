@@ -9,6 +9,7 @@ import HeatExchangers from './components/modules/HeatExchangers/HeatExchangers'
 import FreeConvection from './components/modules/FreeConvection/FreeConvection'
 import Boiling from './components/modules/Boiling/Boiling'
 import Condensation from './components/modules/Condensation/Condensation'
+import IntroductionToConvectionText from './components/texts/IntroductionToConvectionText'
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Route path="/" element={<Home />} />
       <Route path="/modules" element={<Modules />} />
       <Route path="/modules/introduction-to-convection" element={<IntroductionToConvection />} />
+      <Route path="/modules/introduction-to-convection/documentation" element={<IntroductionToConvectionText />} />      
       <Route path="/modules/external-flow" element={<ExternalFlow />} />
       <Route path="/modules/internal-flow" element={<InternalFlow />} />
       <Route path="/modules/heat-exchangers" element={<HeatExchangers />} />

@@ -24,6 +24,9 @@ const HomeHeader = () => {
             <Link to="/modules/introduction-to-convection" className={styles.menuItem} role="menuitem">
               Introduction to Convection
             </Link>
+            <Link to="/modules/introduction-to-convection/documentation" className={styles.menuItem} role="menuitem">
+              Convection Fundamentals
+            </Link>
             <Link to="/modules/external-flow" className={styles.menuItem} role="menuitem">
               External Flow
             </Link>

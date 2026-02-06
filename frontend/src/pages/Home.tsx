@@ -1,5 +1,4 @@
 import styles from './Home.module.css';
-import HomeFeatures from '../components/home/HomeFeatures.tsx';
 import HomeFooter from '../components/home/HomeFooter.tsx';
 import HomeHeader from '../components/home/HomeHeader.tsx';
 import HomeHero from '../components/home/HomeHero';
