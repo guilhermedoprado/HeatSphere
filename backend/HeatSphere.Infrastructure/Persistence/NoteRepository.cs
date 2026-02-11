@@ -1,5 +1,5 @@
-using HeatSphere.Application.Common;
-using HeatSphere.Domain.Common;
+using HeatSphere.Domain.Entities;
+using HeatSphere.Domain.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 namespace HeatSphere.Infrastructure.Persistence;

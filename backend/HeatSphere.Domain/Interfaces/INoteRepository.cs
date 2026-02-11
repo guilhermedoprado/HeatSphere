@@ -1,6 +1,6 @@
-using HeatSphere.Domain.Common;
+using HeatSphere.Domain.Entities;
 
-namespace HeatSphere.Application.Common;
+namespace HeatSphere.Domain.Interfaces;
 
 public interface INoteRepository
 {

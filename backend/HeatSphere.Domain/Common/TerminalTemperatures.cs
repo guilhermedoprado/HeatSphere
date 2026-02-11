@@ -4,7 +4,7 @@ using System.Text;
 
 using HeatSphere.Domain.Common;
 
-namespace HeatSphere.Domain.HeatExchangers;
+namespace HeatSphere.Domain.Common;
 
 public sealed record TerminalTemperatures(
     Temperature ThIn,

@@ -1,0 +1,455 @@
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
+
+#nullable disable
+
+#pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
+
+namespace HeatSphere.Infrastructure.Migrations
+{
+    /// <inheritdoc />
+    public partial class FixSeedDataGuids : Migration
+    {
+        /// <inheritdoc />
+        protected override void Up(MigrationBuilder migrationBuilder)
+        {
+            migrationBuilder.DeleteData(
+                table: "FluidPropertyPoints",
+                keyColumn: "Id",
+                keyValue: new Guid("09372026-1d92-4a22-a3d6-6cc4d645d872"));
+
+            migrationBuilder.DeleteData(
+                table: "FluidPropertyPoints",
+                keyColumn: "Id",
+                keyValue: new Guid("0cf0b9f4-44d0-42e2-bc16-70ea3b1fd925"));
+
+            migrationBuilder.DeleteData(
+                table: "FluidPropertyPoints",
+                keyColumn: "Id",
+                keyValue: new Guid("16a593ee-860f-4933-af6b-477a5ab928b6"));
+
+            migrationBuilder.DeleteData(
+                table: "FluidPropertyPoints",
+                keyColumn: "Id",
+                keyValue: new Guid("17c2973c-396f-404f-a7fc-c8673c982172"));
+
+            migrationBuilder.DeleteData(
+                table: "FluidPropertyPoints",
+                keyColumn: "Id",
+                keyValue: new Guid("275ad924-2d03-4789-b068-aaa1ea4065bb"));
+
+            migrationBuilder.DeleteData(
+                table: "FluidPropertyPoints",
+                keyColumn: "Id",
+                keyValue: new Guid("2889170b-aa4a-4c91-8b66-207bea20e1de"));
+
+            migrationBuilder.DeleteData(
+                table: "FluidPropertyPoints",
+                keyColumn: "Id",
+                keyValue: new Guid("29659671-b0c5-467c-9c93-14659cd3d0c8"));
+
+            migrationBuilder.DeleteData(
+                table: "FluidPropertyPoints",
+                keyColumn: "Id",
+                keyValue: new Guid("3cdf2121-09d1-4554-ab39-e6a5e2895c88"));
+
+            migrationBuilder.DeleteData(
+                table: "FluidPropertyPoints",
+                keyColumn: "Id",
+                keyValue: new Guid("4115e816-f515-43da-8732-4aaf730133ae"));
+
+            migrationBuilder.DeleteData(
+                table: "FluidPropertyPoints",
+                keyColumn: "Id",
+                keyValue: new Guid("478740e7-2ebf-49df-bc4a-7e91ee292308"));
+
+            migrationBuilder.DeleteData(
+                table: "FluidPropertyPoints",
+                keyColumn: "Id",
+                keyValue: new Guid("4b750f72-b0e5-412a-b098-b4d7453fe3f9"));
+
+            migrationBuilder.DeleteData(
+                table: "FluidPropertyPoints",
+                keyColumn: "Id",
+                keyValue: new Guid("4d11f64b-574a-4070-b069-790973bded83"));
+
+            migrationBuilder.DeleteData(
+                table: "FluidPropertyPoints",
+                keyColumn: "Id",
+                keyValue: new Guid("52ec0c5c-2890-4e3e-8402-1abb588d1921"));
+
+            migrationBuilder.DeleteData(
+                table: "FluidPropertyPoints",
+                keyColumn: "Id",
+                keyValue: new Guid("562cea6e-fb3a-443f-82a2-e74bb326b036"));
+
+            migrationBuilder.DeleteData(
+                table: "FluidPropertyPoints",
+                keyColumn: "Id",
+                keyValue: new Guid("5cb5ad5e-79eb-45f4-b25f-c93274ab427a"));
+
+            migrationBuilder.DeleteData(
+                table: "FluidPropertyPoints",
+                keyColumn: "Id",
+                keyValue: new Guid("70d0c3da-abe0-4f8d-ba90-9b0eb0ee40f8"));
+
+            migrationBuilder.DeleteData(
+                table: "FluidPropertyPoints",
+                keyColumn: "Id",
+                keyValue: new Guid("70f8ccd8-55e3-4e7a-bd96-bd180a5a02c4"));
+
+            migrationBuilder.DeleteData(
+                table: "FluidPropertyPoints",
+                keyColumn: "Id",
+                keyValue: new Guid("74e39d2e-9f35-4704-984f-00038d3ddb0d"));
+
+            migrationBuilder.DeleteData(
+                table: "FluidPropertyPoints",
+                keyColumn: "Id",
+                keyValue: new Guid("7bd2eaa0-93f0-4591-98cc-6614844f8462"));
+
+            migrationBuilder.DeleteData(
+                table: "FluidPropertyPoints",
+                keyColumn: "Id",
+                keyValue: new Guid("80ad9b63-07cb-49f0-bd05-0083814f8b8c"));
+
+            migrationBuilder.DeleteData(
+                table: "FluidPropertyPoints",
+                keyColumn: "Id",
+                keyValue: new Guid("863e4fc3-77c0-4ba5-b5c0-1b584e92b5dd"));
+
+            migrationBuilder.DeleteData(
+                table: "FluidPropertyPoints",
+                keyColumn: "Id",
+                keyValue: new Guid("8b7b5992-72b0-45ad-9c9b-3e5b45b8bdbd"));
+
+            migrationBuilder.DeleteData(
+                table: "FluidPropertyPoints",
+                keyColumn: "Id",
+                keyValue: new Guid("91c5054f-6eac-4ef0-b034-ec27d80b0588"));
+
+            migrationBuilder.DeleteData(
+                table: "FluidPropertyPoints",
+                keyColumn: "Id",
+                keyValue: new Guid("9bf1219b-70fb-40bd-bd8e-9294fc078226"));
+
+            migrationBuilder.DeleteData(
+                table: "FluidPropertyPoints",
+                keyColumn: "Id",
+                keyValue: new Guid("ab3d341f-1eff-4c04-85b2-640a2e9e8a22"));
+
+            migrationBuilder.DeleteData(
+                table: "FluidPropertyPoints",
+                keyColumn: "Id",
+                keyValue: new Guid("b049deee-a9d4-4430-9c10-1f4a21e51683"));
+
+            migrationBuilder.DeleteData(
+                table: "FluidPropertyPoints",
+                keyColumn: "Id",
+                keyValue: new Guid("bacd1486-a200-44c4-92a4-c62a39ef46f4"));
+
+            migrationBuilder.DeleteData(
+                table: "FluidPropertyPoints",
+                keyColumn: "Id",
+                keyValue: new Guid("c1c937a7-83fe-4baa-988e-5a14d0703bc3"));
+
+            migrationBuilder.DeleteData(
+                table: "FluidPropertyPoints",
+                keyColumn: "Id",
+                keyValue: new Guid("cbc1d0fe-617b-45b2-823e-c36e63b3f4d9"));
+
+            migrationBuilder.DeleteData(
+                table: "FluidPropertyPoints",
+                keyColumn: "Id",
+                keyValue: new Guid("cffdc9b8-1967-4dc2-9701-ac9f7b20ef2a"));
+
+            migrationBuilder.DeleteData(
+                table: "FluidPropertyPoints",
+                keyColumn: "Id",
+                keyValue: new Guid("de93d9d9-8e37-43f2-9fbd-1df18dd416f3"));
+
+            migrationBuilder.DeleteData(
+                table: "FluidPropertyPoints",
+                keyColumn: "Id",
+                keyValue: new Guid("e11b90f4-0c47-43e0-bd97-9bd8c25f34c7"));
+
+            migrationBuilder.DeleteData(
+                table: "FluidPropertyPoints",
+                keyColumn: "Id",
+                keyValue: new Guid("e6eeaf04-da3d-4934-ae95-e99b51a2decb"));
+
+            migrationBuilder.DeleteData(
+                table: "FluidPropertyPoints",
+                keyColumn: "Id",
+                keyValue: new Guid("eee25fdd-1a04-473e-b7b3-7859c00cb85d"));
+
+            migrationBuilder.DeleteData(
+                table: "FluidPropertyPoints",
+                keyColumn: "Id",
+                keyValue: new Guid("ff63fe0f-c50d-4dd6-925d-6080cab7c4df"));
+
+            migrationBuilder.InsertData(
+                table: "FluidPropertyPoints",
+                columns: new[] { "Id", "Density", "DynamicViscosity", "FluidId", "KinematicViscosity", "Prandtl", "SpecificHeatAtConstantPressure", "TemperatureK", "ThermalConductivity", "ThermalDiffusivity" },
+                values: new object[,]
+                {
+                    { new Guid("00000000-0000-0000-0000-000000000001"), 3.5562, 7.1099999999999997E-06, new Guid("11111111-1111-1111-1111-111111111111"), 1.9999999999999999E-06, 0.78600000000000003, 1032.0, 100.0, 0.0093399999999999993, 2.5399999999999998E-06 },
+                    { new Guid("00000000-0000-0000-0000-000000000002"), 2.3363999999999998, 1.0339999999999999E-05, new Guid("11111111-1111-1111-1111-111111111111"), 4.4259999999999996E-06, 0.75800000000000001, 1012.0, 150.0, 0.0138, 5.84E-06 },
+                    { new Guid("00000000-0000-0000-0000-000000000003"), 1.7458, 1.325E-05, new Guid("11111111-1111-1111-1111-111111111111"), 7.5900000000000002E-06, 0.73699999999999999, 1007.0, 200.0, 0.018100000000000002, 1.03E-05 },
+                    { new Guid("00000000-0000-0000-0000-000000000004"), 1.3947000000000001, 1.596E-05, new Guid("11111111-1111-1111-1111-111111111111"), 1.1440000000000001E-05, 0.71999999999999997, 1006.0, 250.0, 0.0223, 1.59E-05 },
+                    { new Guid("00000000-0000-0000-0000-000000000005"), 1.1614, 1.8459999999999999E-05, new Guid("11111111-1111-1111-1111-111111111111"), 1.5889999999999999E-05, 0.70699999999999996, 1007.0, 300.0, 0.0263, 2.2500000000000001E-05 },
+                    { new Guid("00000000-0000-0000-0000-000000000006"), 0.995, 2.0820000000000001E-05, new Guid("11111111-1111-1111-1111-111111111111"), 2.092E-05, 0.69999999999999996, 1009.0, 350.0, 0.029999999999999999, 2.9899999999999998E-05 },
+                    { new Guid("00000000-0000-0000-0000-000000000007"), 0.87109999999999999, 2.3010000000000002E-05, new Guid("11111111-1111-1111-1111-111111111111"), 2.641E-05, 0.68999999999999995, 1014.0, 400.0, 0.033799999999999997, 3.8300000000000003E-05 },
+                    { new Guid("00000000-0000-0000-0000-000000000008"), 0.77400000000000002, 2.5069999999999999E-05, new Guid("11111111-1111-1111-1111-111111111111"), 3.239E-05, 0.68600000000000005, 1021.0, 450.0, 0.0373, 4.7200000000000002E-05 },
+                    { new Guid("00000000-0000-0000-0000-000000000009"), 0.69640000000000002, 2.7010000000000001E-05, new Guid("11111111-1111-1111-1111-111111111111"), 3.879E-05, 0.68400000000000005, 1030.0, 500.0, 0.0407, 5.6700000000000003E-05 },
+                    { new Guid("00000000-0000-0000-0000-000000000010"), 0.63290000000000002, 2.8839999999999998E-05, new Guid("11111111-1111-1111-1111-111111111111"), 4.5569999999999999E-05, 0.68300000000000005, 1040.0, 550.0, 0.043900000000000002, 6.6699999999999995E-05 },
+                    { new Guid("00000000-0000-0000-0000-000000000011"), 0.58040000000000003, 3.0580000000000002E-05, new Guid("11111111-1111-1111-1111-111111111111"), 5.2689999999999999E-05, 0.68500000000000005, 1051.0, 600.0, 0.046899999999999997, 7.6899999999999999E-05 },
+                    { new Guid("00000000-0000-0000-0000-000000000012"), 0.53559999999999997, 3.2249999999999998E-05, new Guid("11111111-1111-1111-1111-111111111111"), 6.0210000000000001E-05, 0.68999999999999995, 1063.0, 650.0, 0.049700000000000001, 8.7299999999999994E-05 },
+                    { new Guid("00000000-0000-0000-0000-000000000013"), 0.4975, 3.3880000000000001E-05, new Guid("11111111-1111-1111-1111-111111111111"), 6.8100000000000002E-05, 0.69499999999999995, 1075.0, 700.0, 0.052400000000000002, 9.7999999999999997E-05 },
+                    { new Guid("00000000-0000-0000-0000-000000000014"), 0.46429999999999999, 3.5460000000000003E-05, new Guid("11111111-1111-1111-1111-111111111111"), 7.6370000000000002E-05, 0.70199999999999996, 1087.0, 750.0, 0.054899999999999997, 0.00010900000000000001 },
+                    { new Guid("00000000-0000-0000-0000-000000000015"), 0.43540000000000001, 3.6980000000000002E-05, new Guid("11111111-1111-1111-1111-111111111111"), 8.4930000000000002E-05, 0.70899999999999996, 1099.0, 800.0, 0.057299999999999997, 0.00012 },
+                    { new Guid("00000000-0000-0000-0000-000000000016"), 0.40970000000000001, 3.8430000000000003E-05, new Guid("11111111-1111-1111-1111-111111111111"), 9.3800000000000003E-05, 0.71599999999999997, 1110.0, 850.0, 0.0596, 0.00013100000000000001 },
+                    { new Guid("00000000-0000-0000-0000-000000000017"), 0.38679999999999998, 3.981E-05, new Guid("11111111-1111-1111-1111-111111111111"), 0.00010289999999999999, 0.71999999999999997, 1121.0, 900.0, 0.062, 0.00014300000000000001 },
+                    { new Guid("00000000-0000-0000-0000-000000000018"), 0.36659999999999998, 4.1130000000000001E-05, new Guid("11111111-1111-1111-1111-111111111111"), 0.0001122, 0.72299999999999998, 1131.0, 950.0, 0.064299999999999996, 0.000155 },
+                    { new Guid("00000000-0000-0000-0000-000000000019"), 0.34820000000000001, 4.244E-05, new Guid("11111111-1111-1111-1111-111111111111"), 0.0001219, 0.72599999999999998, 1141.0, 1000.0, 0.066699999999999995, 0.00016799999999999999 },
+                    { new Guid("00000000-0000-0000-0000-000000000020"), 0.31659999999999999, 4.49E-05, new Guid("11111111-1111-1111-1111-111111111111"), 0.0001418, 0.72799999999999998, 1159.0, 1100.0, 0.071499999999999994, 0.000195 },
+                    { new Guid("00000000-0000-0000-0000-000000000021"), 0.29020000000000001, 4.7299999999999998E-05, new Guid("11111111-1111-1111-1111-111111111111"), 0.0001629, 0.72799999999999998, 1175.0, 1200.0, 0.076300000000000007, 0.000224 },
+                    { new Guid("00000000-0000-0000-0000-000000000022"), 0.26790000000000003, 4.9599999999999999E-05, new Guid("11111111-1111-1111-1111-111111111111"), 0.0001851, 0.71899999999999997, 1189.0, 1300.0, 0.082000000000000003, 0.00025700000000000001 },
+                    { new Guid("00000000-0000-0000-0000-000000000023"), 0.24879999999999999, 5.3000000000000001E-05, new Guid("11111111-1111-1111-1111-111111111111"), 0.000213, 0.70299999999999996, 1207.0, 1400.0, 0.090999999999999998, 0.00030299999999999999 },
+                    { new Guid("00000000-0000-0000-0000-000000000024"), 0.23219999999999999, 5.5699999999999999E-05, new Guid("11111111-1111-1111-1111-111111111111"), 0.00024000000000000001, 0.68500000000000005, 1230.0, 1500.0, 0.10000000000000001, 0.00035 },
+                    { new Guid("00000000-0000-0000-0000-000000000025"), 0.2177, 5.8400000000000003E-05, new Guid("11111111-1111-1111-1111-111111111111"), 0.00026800000000000001, 0.68799999999999994, 1248.0, 1600.0, 0.106, 0.00038999999999999999 },
+                    { new Guid("00000000-0000-0000-0000-000000000026"), 0.2049, 6.1099999999999994E-05, new Guid("11111111-1111-1111-1111-111111111111"), 0.00029799999999999998, 0.68500000000000005, 1267.0, 1700.0, 0.113, 0.000435 },
+                    { new Guid("00000000-0000-0000-0000-000000000027"), 0.19350000000000001, 6.3700000000000003E-05, new Guid("11111111-1111-1111-1111-111111111111"), 0.00032899999999999997, 0.68300000000000005, 1286.0, 1800.0, 0.12, 0.00048200000000000001 },
+                    { new Guid("00000000-0000-0000-0000-000000000028"), 0.18329999999999999, 6.6299999999999999E-05, new Guid("11111111-1111-1111-1111-111111111111"), 0.00036200000000000002, 0.67700000000000005, 1307.0, 1900.0, 0.128, 0.00053399999999999997 },
+                    { new Guid("00000000-0000-0000-0000-000000000029"), 0.1741, 6.8899999999999994E-05, new Guid("11111111-1111-1111-1111-111111111111"), 0.00039599999999999998, 0.67200000000000004, 1337.0, 2000.0, 0.13700000000000001, 0.00058900000000000001 },
+                    { new Guid("00000000-0000-0000-0000-000000000030"), 0.1658, 7.1500000000000003E-05, new Guid("11111111-1111-1111-1111-111111111111"), 0.00043100000000000001, 0.66700000000000004, 1372.0, 2100.0, 0.14699999999999999, 0.00064599999999999998 },
+                    { new Guid("00000000-0000-0000-0000-000000000031"), 0.15820000000000001, 7.3999999999999996E-05, new Guid("11111111-1111-1111-1111-111111111111"), 0.00046799999999999999, 0.65500000000000003, 1417.0, 2200.0, 0.16, 0.00071400000000000001 },
+                    { new Guid("00000000-0000-0000-0000-000000000032"), 0.15129999999999999, 7.6600000000000005E-05, new Guid("11111111-1111-1111-1111-111111111111"), 0.00050600000000000005, 0.64700000000000002, 1478.0, 2300.0, 0.17499999999999999, 0.00078299999999999995 },
+                    { new Guid("00000000-0000-0000-0000-000000000033"), 0.14480000000000001, 7.9200000000000001E-05, new Guid("11111111-1111-1111-1111-111111111111"), 0.00054699999999999996, 0.63, 1558.0, 2400.0, 0.19600000000000001, 0.00086899999999999998 },
+                    { new Guid("00000000-0000-0000-0000-000000000034"), 0.1389, 8.1799999999999996E-05, new Guid("11111111-1111-1111-1111-111111111111"), 0.00058900000000000001, 0.61299999999999999, 1665.0, 2500.0, 0.222, 0.00096000000000000002 },
+                    { new Guid("00000000-0000-0000-0000-000000000035"), 0.1135, 9.5500000000000004E-05, new Guid("11111111-1111-1111-1111-111111111111"), 0.00084099999999999995, 0.53600000000000003, 2726.0, 3000.0, 0.48599999999999999, 0.00157 }
+                });
+        }
+
+        /// <inheritdoc />
+        protected override void Down(MigrationBuilder migrationBuilder)
+        {
+            migrationBuilder.DeleteData(
+                table: "FluidPropertyPoints",
+                keyColumn: "Id",
+                keyValue: new Guid("00000000-0000-0000-0000-000000000001"));
+
+            migrationBuilder.DeleteData(
+                table: "FluidPropertyPoints",
+                keyColumn: "Id",
+                keyValue: new Guid("00000000-0000-0000-0000-000000000002"));
+
+            migrationBuilder.DeleteData(
+                table: "FluidPropertyPoints",
+                keyColumn: "Id",
+                keyValue: new Guid("00000000-0000-0000-0000-000000000003"));
+
+            migrationBuilder.DeleteData(
+                table: "FluidPropertyPoints",
+                keyColumn: "Id",
+                keyValue: new Guid("00000000-0000-0000-0000-000000000004"));
+
+            migrationBuilder.DeleteData(
+                table: "FluidPropertyPoints",
+                keyColumn: "Id",
+                keyValue: new Guid("00000000-0000-0000-0000-000000000005"));
+
+            migrationBuilder.DeleteData(
+                table: "FluidPropertyPoints",
+                keyColumn: "Id",
+                keyValue: new Guid("00000000-0000-0000-0000-000000000006"));
+
+            migrationBuilder.DeleteData(
+                table: "FluidPropertyPoints",
+                keyColumn: "Id",
+                keyValue: new Guid("00000000-0000-0000-0000-000000000007"));
+
+            migrationBuilder.DeleteData(
+                table: "FluidPropertyPoints",
+                keyColumn: "Id",
+                keyValue: new Guid("00000000-0000-0000-0000-000000000008"));
+
+            migrationBuilder.DeleteData(
+                table: "FluidPropertyPoints",
+                keyColumn: "Id",
+                keyValue: new Guid("00000000-0000-0000-0000-000000000009"));
+
+            migrationBuilder.DeleteData(
+                table: "FluidPropertyPoints",
+                keyColumn: "Id",
+                keyValue: new Guid("00000000-0000-0000-0000-000000000010"));
+
+            migrationBuilder.DeleteData(
+                table: "FluidPropertyPoints",
+                keyColumn: "Id",
+                keyValue: new Guid("00000000-0000-0000-0000-000000000011"));
+
+            migrationBuilder.DeleteData(
+                table: "FluidPropertyPoints",
+                keyColumn: "Id",
+                keyValue: new Guid("00000000-0000-0000-0000-000000000012"));
+
+            migrationBuilder.DeleteData(
+                table: "FluidPropertyPoints",
+                keyColumn: "Id",
+                keyValue: new Guid("00000000-0000-0000-0000-000000000013"));
+
+            migrationBuilder.DeleteData(
+                table: "FluidPropertyPoints",
+                keyColumn: "Id",
+                keyValue: new Guid("00000000-0000-0000-0000-000000000014"));
+
+            migrationBuilder.DeleteData(
+                table: "FluidPropertyPoints",
+                keyColumn: "Id",
+                keyValue: new Guid("00000000-0000-0000-0000-000000000015"));
+
+            migrationBuilder.DeleteData(
+                table: "FluidPropertyPoints",
+                keyColumn: "Id",
+                keyValue: new Guid("00000000-0000-0000-0000-000000000016"));
+
+            migrationBuilder.DeleteData(
+                table: "FluidPropertyPoints",
+                keyColumn: "Id",
+                keyValue: new Guid("00000000-0000-0000-0000-000000000017"));
+
+            migrationBuilder.DeleteData(
+                table: "FluidPropertyPoints",
+                keyColumn: "Id",
+                keyValue: new Guid("00000000-0000-0000-0000-000000000018"));
+
+            migrationBuilder.DeleteData(
+                table: "FluidPropertyPoints",
+                keyColumn: "Id",
+                keyValue: new Guid("00000000-0000-0000-0000-000000000019"));
+
+            migrationBuilder.DeleteData(
+                table: "FluidPropertyPoints",
+                keyColumn: "Id",
+                keyValue: new Guid("00000000-0000-0000-0000-000000000020"));
+
+            migrationBuilder.DeleteData(
+                table: "FluidPropertyPoints",
+                keyColumn: "Id",
+                keyValue: new Guid("00000000-0000-0000-0000-000000000021"));
+
+            migrationBuilder.DeleteData(
+                table: "FluidPropertyPoints",
+                keyColumn: "Id",
+                keyValue: new Guid("00000000-0000-0000-0000-000000000022"));
+
+            migrationBuilder.DeleteData(
+                table: "FluidPropertyPoints",
+                keyColumn: "Id",
+                keyValue: new Guid("00000000-0000-0000-0000-000000000023"));
+
+            migrationBuilder.DeleteData(
+                table: "FluidPropertyPoints",
+                keyColumn: "Id",
+                keyValue: new Guid("00000000-0000-0000-0000-000000000024"));
+
+            migrationBuilder.DeleteData(
+                table: "FluidPropertyPoints",
+                keyColumn: "Id",
+                keyValue: new Guid("00000000-0000-0000-0000-000000000025"));
+
+            migrationBuilder.DeleteData(
+                table: "FluidPropertyPoints",
+                keyColumn: "Id",
+                keyValue: new Guid("00000000-0000-0000-0000-000000000026"));
+
+            migrationBuilder.DeleteData(
+                table: "FluidPropertyPoints",
+                keyColumn: "Id",
+                keyValue: new Guid("00000000-0000-0000-0000-000000000027"));
+
+            migrationBuilder.DeleteData(
+                table: "FluidPropertyPoints",
+                keyColumn: "Id",
+                keyValue: new Guid("00000000-0000-0000-0000-000000000028"));
+
+            migrationBuilder.DeleteData(
+                table: "FluidPropertyPoints",
+                keyColumn: "Id",
+                keyValue: new Guid("00000000-0000-0000-0000-000000000029"));
+
+            migrationBuilder.DeleteData(
+                table: "FluidPropertyPoints",
+                keyColumn: "Id",
+                keyValue: new Guid("00000000-0000-0000-0000-000000000030"));
+
+            migrationBuilder.DeleteData(
+                table: "FluidPropertyPoints",
+                keyColumn: "Id",
+                keyValue: new Guid("00000000-0000-0000-0000-000000000031"));
+
+            migrationBuilder.DeleteData(
+                table: "FluidPropertyPoints",
+                keyColumn: "Id",
+                keyValue: new Guid("00000000-0000-0000-0000-000000000032"));
+
+            migrationBuilder.DeleteData(
+                table: "FluidPropertyPoints",
+                keyColumn: "Id",
+                keyValue: new Guid("00000000-0000-0000-0000-000000000033"));
+
+            migrationBuilder.DeleteData(
+                table: "FluidPropertyPoints",
+                keyColumn: "Id",
+                keyValue: new Guid("00000000-0000-0000-0000-000000000034"));
+
+            migrationBuilder.DeleteData(
+                table: "FluidPropertyPoints",
+                keyColumn: "Id",
+                keyValue: new Guid("00000000-0000-0000-0000-000000000035"));
+
+            migrationBuilder.InsertData(
+                table: "FluidPropertyPoints",
+                columns: new[] { "Id", "Density", "DynamicViscosity", "FluidId", "KinematicViscosity", "Prandtl", "SpecificHeatAtConstantPressure", "TemperatureK", "ThermalConductivity", "ThermalDiffusivity" },
+                values: new object[,]
+                {
+                    { new Guid("09372026-1d92-4a22-a3d6-6cc4d645d872"), 0.77400000000000002, 2.5069999999999999E-05, new Guid("11111111-1111-1111-1111-111111111111"), 3.239E-05, 0.68600000000000005, 1021.0, 450.0, 0.0373, 4.7200000000000002E-05 },
+                    { new Guid("0cf0b9f4-44d0-42e2-bc16-70ea3b1fd925"), 0.1389, 8.1799999999999996E-05, new Guid("11111111-1111-1111-1111-111111111111"), 0.00058900000000000001, 0.61299999999999999, 1665.0, 2500.0, 0.222, 0.00096000000000000002 },
+                    { new Guid("16a593ee-860f-4933-af6b-477a5ab928b6"), 0.18329999999999999, 6.6299999999999999E-05, new Guid("11111111-1111-1111-1111-111111111111"), 0.00036200000000000002, 0.67700000000000005, 1307.0, 1900.0, 0.128, 0.00053399999999999997 },
+                    { new Guid("17c2973c-396f-404f-a7fc-c8673c982172"), 0.69640000000000002, 2.7010000000000001E-05, new Guid("11111111-1111-1111-1111-111111111111"), 3.879E-05, 0.68400000000000005, 1030.0, 500.0, 0.0407, 5.6700000000000003E-05 },
+                    { new Guid("275ad924-2d03-4789-b068-aaa1ea4065bb"), 0.38679999999999998, 3.981E-05, new Guid("11111111-1111-1111-1111-111111111111"), 0.00010289999999999999, 0.71999999999999997, 1121.0, 900.0, 0.062, 0.00014300000000000001 },
+                    { new Guid("2889170b-aa4a-4c91-8b66-207bea20e1de"), 0.14480000000000001, 7.9200000000000001E-05, new Guid("11111111-1111-1111-1111-111111111111"), 0.00054699999999999996, 0.63, 1558.0, 2400.0, 0.19600000000000001, 0.00086899999999999998 },
+                    { new Guid("29659671-b0c5-467c-9c93-14659cd3d0c8"), 1.1614, 1.8459999999999999E-05, new Guid("11111111-1111-1111-1111-111111111111"), 1.5889999999999999E-05, 0.70699999999999996, 1007.0, 300.0, 0.0263, 2.2500000000000001E-05 },
+                    { new Guid("3cdf2121-09d1-4554-ab39-e6a5e2895c88"), 0.23219999999999999, 5.5699999999999999E-05, new Guid("11111111-1111-1111-1111-111111111111"), 0.00024000000000000001, 0.68500000000000005, 1230.0, 1500.0, 0.10000000000000001, 0.00035 },
+                    { new Guid("4115e816-f515-43da-8732-4aaf730133ae"), 1.3947000000000001, 1.596E-05, new Guid("11111111-1111-1111-1111-111111111111"), 1.1440000000000001E-05, 0.71999999999999997, 1006.0, 250.0, 0.0223, 1.59E-05 },
+                    { new Guid("478740e7-2ebf-49df-bc4a-7e91ee292308"), 0.63290000000000002, 2.8839999999999998E-05, new Guid("11111111-1111-1111-1111-111111111111"), 4.5569999999999999E-05, 0.68300000000000005, 1040.0, 550.0, 0.043900000000000002, 6.6699999999999995E-05 },
+                    { new Guid("4b750f72-b0e5-412a-b098-b4d7453fe3f9"), 3.5562, 7.1099999999999997E-06, new Guid("11111111-1111-1111-1111-111111111111"), 1.9999999999999999E-06, 0.78600000000000003, 1032.0, 100.0, 0.0093399999999999993, 2.5399999999999998E-06 },
+                    { new Guid("4d11f64b-574a-4070-b069-790973bded83"), 0.87109999999999999, 2.3010000000000002E-05, new Guid("11111111-1111-1111-1111-111111111111"), 2.641E-05, 0.68999999999999995, 1014.0, 400.0, 0.033799999999999997, 3.8300000000000003E-05 },
+                    { new Guid("52ec0c5c-2890-4e3e-8402-1abb588d1921"), 1.7458, 1.325E-05, new Guid("11111111-1111-1111-1111-111111111111"), 7.5900000000000002E-06, 0.73699999999999999, 1007.0, 200.0, 0.018100000000000002, 1.03E-05 },
+                    { new Guid("562cea6e-fb3a-443f-82a2-e74bb326b036"), 0.1135, 9.5500000000000004E-05, new Guid("11111111-1111-1111-1111-111111111111"), 0.00084099999999999995, 0.53600000000000003, 2726.0, 3000.0, 0.48599999999999999, 0.00157 },
+                    { new Guid("5cb5ad5e-79eb-45f4-b25f-c93274ab427a"), 0.19350000000000001, 6.3700000000000003E-05, new Guid("11111111-1111-1111-1111-111111111111"), 0.00032899999999999997, 0.68300000000000005, 1286.0, 1800.0, 0.12, 0.00048200000000000001 },
+                    { new Guid("70d0c3da-abe0-4f8d-ba90-9b0eb0ee40f8"), 0.15129999999999999, 7.6600000000000005E-05, new Guid("11111111-1111-1111-1111-111111111111"), 0.00050600000000000005, 0.64700000000000002, 1478.0, 2300.0, 0.17499999999999999, 0.00078299999999999995 },
+                    { new Guid("70f8ccd8-55e3-4e7a-bd96-bd180a5a02c4"), 0.29020000000000001, 4.7299999999999998E-05, new Guid("11111111-1111-1111-1111-111111111111"), 0.0001629, 0.72799999999999998, 1175.0, 1200.0, 0.076300000000000007, 0.000224 },
+                    { new Guid("74e39d2e-9f35-4704-984f-00038d3ddb0d"), 0.34820000000000001, 4.244E-05, new Guid("11111111-1111-1111-1111-111111111111"), 0.0001219, 0.72599999999999998, 1141.0, 1000.0, 0.066699999999999995, 0.00016799999999999999 },
+                    { new Guid("7bd2eaa0-93f0-4591-98cc-6614844f8462"), 0.31659999999999999, 4.49E-05, new Guid("11111111-1111-1111-1111-111111111111"), 0.0001418, 0.72799999999999998, 1159.0, 1100.0, 0.071499999999999994, 0.000195 },
+                    { new Guid("80ad9b63-07cb-49f0-bd05-0083814f8b8c"), 0.1658, 7.1500000000000003E-05, new Guid("11111111-1111-1111-1111-111111111111"), 0.00043100000000000001, 0.66700000000000004, 1372.0, 2100.0, 0.14699999999999999, 0.00064599999999999998 },
+                    { new Guid("863e4fc3-77c0-4ba5-b5c0-1b584e92b5dd"), 0.1741, 6.8899999999999994E-05, new Guid("11111111-1111-1111-1111-111111111111"), 0.00039599999999999998, 0.67200000000000004, 1337.0, 2000.0, 0.13700000000000001, 0.00058900000000000001 },
+                    { new Guid("8b7b5992-72b0-45ad-9c9b-3e5b45b8bdbd"), 0.2049, 6.1099999999999994E-05, new Guid("11111111-1111-1111-1111-111111111111"), 0.00029799999999999998, 0.68500000000000005, 1267.0, 1700.0, 0.113, 0.000435 },
+                    { new Guid("91c5054f-6eac-4ef0-b034-ec27d80b0588"), 2.3363999999999998, 1.0339999999999999E-05, new Guid("11111111-1111-1111-1111-111111111111"), 4.4259999999999996E-06, 0.75800000000000001, 1012.0, 150.0, 0.0138, 5.84E-06 },
+                    { new Guid("9bf1219b-70fb-40bd-bd8e-9294fc078226"), 0.36659999999999998, 4.1130000000000001E-05, new Guid("11111111-1111-1111-1111-111111111111"), 0.0001122, 0.72299999999999998, 1131.0, 950.0, 0.064299999999999996, 0.000155 },
+                    { new Guid("ab3d341f-1eff-4c04-85b2-640a2e9e8a22"), 0.15820000000000001, 7.3999999999999996E-05, new Guid("11111111-1111-1111-1111-111111111111"), 0.00046799999999999999, 0.65500000000000003, 1417.0, 2200.0, 0.16, 0.00071400000000000001 },
+                    { new Guid("b049deee-a9d4-4430-9c10-1f4a21e51683"), 0.58040000000000003, 3.0580000000000002E-05, new Guid("11111111-1111-1111-1111-111111111111"), 5.2689999999999999E-05, 0.68500000000000005, 1051.0, 600.0, 0.046899999999999997, 7.6899999999999999E-05 },
+                    { new Guid("bacd1486-a200-44c4-92a4-c62a39ef46f4"), 0.53559999999999997, 3.2249999999999998E-05, new Guid("11111111-1111-1111-1111-111111111111"), 6.0210000000000001E-05, 0.68999999999999995, 1063.0, 650.0, 0.049700000000000001, 8.7299999999999994E-05 },
+                    { new Guid("c1c937a7-83fe-4baa-988e-5a14d0703bc3"), 0.2177, 5.8400000000000003E-05, new Guid("11111111-1111-1111-1111-111111111111"), 0.00026800000000000001, 0.68799999999999994, 1248.0, 1600.0, 0.106, 0.00038999999999999999 },
+                    { new Guid("cbc1d0fe-617b-45b2-823e-c36e63b3f4d9"), 0.24879999999999999, 5.3000000000000001E-05, new Guid("11111111-1111-1111-1111-111111111111"), 0.000213, 0.70299999999999996, 1207.0, 1400.0, 0.090999999999999998, 0.00030299999999999999 },
+                    { new Guid("cffdc9b8-1967-4dc2-9701-ac9f7b20ef2a"), 0.4975, 3.3880000000000001E-05, new Guid("11111111-1111-1111-1111-111111111111"), 6.8100000000000002E-05, 0.69499999999999995, 1075.0, 700.0, 0.052400000000000002, 9.7999999999999997E-05 },
+                    { new Guid("de93d9d9-8e37-43f2-9fbd-1df18dd416f3"), 0.43540000000000001, 3.6980000000000002E-05, new Guid("11111111-1111-1111-1111-111111111111"), 8.4930000000000002E-05, 0.70899999999999996, 1099.0, 800.0, 0.057299999999999997, 0.00012 },
+                    { new Guid("e11b90f4-0c47-43e0-bd97-9bd8c25f34c7"), 0.40970000000000001, 3.8430000000000003E-05, new Guid("11111111-1111-1111-1111-111111111111"), 9.3800000000000003E-05, 0.71599999999999997, 1110.0, 850.0, 0.0596, 0.00013100000000000001 },
+                    { new Guid("e6eeaf04-da3d-4934-ae95-e99b51a2decb"), 0.26790000000000003, 4.9599999999999999E-05, new Guid("11111111-1111-1111-1111-111111111111"), 0.0001851, 0.71899999999999997, 1189.0, 1300.0, 0.082000000000000003, 0.00025700000000000001 },
+                    { new Guid("eee25fdd-1a04-473e-b7b3-7859c00cb85d"), 0.995, 2.0820000000000001E-05, new Guid("11111111-1111-1111-1111-111111111111"), 2.092E-05, 0.69999999999999996, 1009.0, 350.0, 0.029999999999999999, 2.9899999999999998E-05 },
+                    { new Guid("ff63fe0f-c50d-4dd6-925d-6080cab7c4df"), 0.46429999999999999, 3.5460000000000003E-05, new Guid("11111111-1111-1111-1111-111111111111"), 7.6370000000000002E-05, 0.70199999999999996, 1087.0, 750.0, 0.054899999999999997, 0.00010900000000000001 }
+                });
+        }
+    }
+}

@@ -1,5 +1,5 @@
-# build
-FROM mcr.microsoft.com/dotnet/sdk:10.0 AS build
+# build — pinned to match local SDK (dotnet --version)
+FROM mcr.microsoft.com/dotnet/sdk:10.0.102 AS build
 WORKDIR /src
 
 COPY backend/HeatSphere.Domain/HeatSphere.Domain.csproj backend/HeatSphere.Domain/
@@ -12,8 +12,8 @@ RUN dotnet restore backend/HeatSphere.Api/HeatSphere.Api.csproj
 COPY . .
 RUN dotnet publish backend/HeatSphere.Api/HeatSphere.Api.csproj -c Release -o /app/publish
 
-# run
-FROM mcr.microsoft.com/dotnet/aspnet:10.0 AS final
+# run — pinned to matching runtime
+FROM mcr.microsoft.com/dotnet/aspnet:10.0.1 AS final
 WORKDIR /app
 EXPOSE 8080
 ENV ASPNETCORE_URLS=http://+:8080

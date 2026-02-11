@@ -1,0 +1,1 @@
+namespace HeatSphere.Application.Interfaces;

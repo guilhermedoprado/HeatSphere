@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using HeatSphere.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -12,9 +13,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace HeatSphere.Infrastructure.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260211162305_AddFluidsAndRefactorNotes")]
+    partial class AddFluidsAndRefactorNotes
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -87,7 +90,7 @@ namespace HeatSphere.Infrastructure.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("00000000-0000-0000-0000-000000000001"),
+                            Id = new Guid("4b750f72-b0e5-412a-b098-b4d7453fe3f9"),
                             Density = 3.5562,
                             DynamicViscosity = 7.1099999999999997E-06,
                             FluidId = new Guid("11111111-1111-1111-1111-111111111111"),
@@ -100,7 +103,7 @@ namespace HeatSphere.Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("00000000-0000-0000-0000-000000000002"),
+                            Id = new Guid("91c5054f-6eac-4ef0-b034-ec27d80b0588"),
                             Density = 2.3363999999999998,
                             DynamicViscosity = 1.0339999999999999E-05,
                             FluidId = new Guid("11111111-1111-1111-1111-111111111111"),
@@ -113,7 +116,7 @@ namespace HeatSphere.Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("00000000-0000-0000-0000-000000000003"),
+                            Id = new Guid("52ec0c5c-2890-4e3e-8402-1abb588d1921"),
                             Density = 1.7458,
                             DynamicViscosity = 1.325E-05,
                             FluidId = new Guid("11111111-1111-1111-1111-111111111111"),
@@ -126,7 +129,7 @@ namespace HeatSphere.Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("00000000-0000-0000-0000-000000000004"),
+                            Id = new Guid("4115e816-f515-43da-8732-4aaf730133ae"),
                             Density = 1.3947000000000001,
                             DynamicViscosity = 1.596E-05,
                             FluidId = new Guid("11111111-1111-1111-1111-111111111111"),
@@ -139,7 +142,7 @@ namespace HeatSphere.Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("00000000-0000-0000-0000-000000000005"),
+                            Id = new Guid("29659671-b0c5-467c-9c93-14659cd3d0c8"),
                             Density = 1.1614,
                             DynamicViscosity = 1.8459999999999999E-05,
                             FluidId = new Guid("11111111-1111-1111-1111-111111111111"),
@@ -152,7 +155,7 @@ namespace HeatSphere.Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("00000000-0000-0000-0000-000000000006"),
+                            Id = new Guid("eee25fdd-1a04-473e-b7b3-7859c00cb85d"),
                             Density = 0.995,
                             DynamicViscosity = 2.0820000000000001E-05,
                             FluidId = new Guid("11111111-1111-1111-1111-111111111111"),
@@ -165,7 +168,7 @@ namespace HeatSphere.Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("00000000-0000-0000-0000-000000000007"),
+                            Id = new Guid("4d11f64b-574a-4070-b069-790973bded83"),
                             Density = 0.87109999999999999,
                             DynamicViscosity = 2.3010000000000002E-05,
                             FluidId = new Guid("11111111-1111-1111-1111-111111111111"),
@@ -178,7 +181,7 @@ namespace HeatSphere.Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("00000000-0000-0000-0000-000000000008"),
+                            Id = new Guid("09372026-1d92-4a22-a3d6-6cc4d645d872"),
                             Density = 0.77400000000000002,
                             DynamicViscosity = 2.5069999999999999E-05,
                             FluidId = new Guid("11111111-1111-1111-1111-111111111111"),
@@ -191,7 +194,7 @@ namespace HeatSphere.Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("00000000-0000-0000-0000-000000000009"),
+                            Id = new Guid("17c2973c-396f-404f-a7fc-c8673c982172"),
                             Density = 0.69640000000000002,
                             DynamicViscosity = 2.7010000000000001E-05,
                             FluidId = new Guid("11111111-1111-1111-1111-111111111111"),
@@ -204,7 +207,7 @@ namespace HeatSphere.Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("00000000-0000-0000-0000-000000000010"),
+                            Id = new Guid("478740e7-2ebf-49df-bc4a-7e91ee292308"),
                             Density = 0.63290000000000002,
                             DynamicViscosity = 2.8839999999999998E-05,
                             FluidId = new Guid("11111111-1111-1111-1111-111111111111"),
@@ -217,7 +220,7 @@ namespace HeatSphere.Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("00000000-0000-0000-0000-000000000011"),
+                            Id = new Guid("b049deee-a9d4-4430-9c10-1f4a21e51683"),
                             Density = 0.58040000000000003,
                             DynamicViscosity = 3.0580000000000002E-05,
                             FluidId = new Guid("11111111-1111-1111-1111-111111111111"),
@@ -230,7 +233,7 @@ namespace HeatSphere.Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("00000000-0000-0000-0000-000000000012"),
+                            Id = new Guid("bacd1486-a200-44c4-92a4-c62a39ef46f4"),
                             Density = 0.53559999999999997,
                             DynamicViscosity = 3.2249999999999998E-05,
                             FluidId = new Guid("11111111-1111-1111-1111-111111111111"),
@@ -243,7 +246,7 @@ namespace HeatSphere.Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("00000000-0000-0000-0000-000000000013"),
+                            Id = new Guid("cffdc9b8-1967-4dc2-9701-ac9f7b20ef2a"),
                             Density = 0.4975,
                             DynamicViscosity = 3.3880000000000001E-05,
                             FluidId = new Guid("11111111-1111-1111-1111-111111111111"),
@@ -256,7 +259,7 @@ namespace HeatSphere.Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("00000000-0000-0000-0000-000000000014"),
+                            Id = new Guid("ff63fe0f-c50d-4dd6-925d-6080cab7c4df"),
                             Density = 0.46429999999999999,
                             DynamicViscosity = 3.5460000000000003E-05,
                             FluidId = new Guid("11111111-1111-1111-1111-111111111111"),
@@ -269,7 +272,7 @@ namespace HeatSphere.Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("00000000-0000-0000-0000-000000000015"),
+                            Id = new Guid("de93d9d9-8e37-43f2-9fbd-1df18dd416f3"),
                             Density = 0.43540000000000001,
                             DynamicViscosity = 3.6980000000000002E-05,
                             FluidId = new Guid("11111111-1111-1111-1111-111111111111"),
@@ -282,7 +285,7 @@ namespace HeatSphere.Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("00000000-0000-0000-0000-000000000016"),
+                            Id = new Guid("e11b90f4-0c47-43e0-bd97-9bd8c25f34c7"),
                             Density = 0.40970000000000001,
                             DynamicViscosity = 3.8430000000000003E-05,
                             FluidId = new Guid("11111111-1111-1111-1111-111111111111"),
@@ -295,7 +298,7 @@ namespace HeatSphere.Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("00000000-0000-0000-0000-000000000017"),
+                            Id = new Guid("275ad924-2d03-4789-b068-aaa1ea4065bb"),
                             Density = 0.38679999999999998,
                             DynamicViscosity = 3.981E-05,
                             FluidId = new Guid("11111111-1111-1111-1111-111111111111"),
@@ -308,7 +311,7 @@ namespace HeatSphere.Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("00000000-0000-0000-0000-000000000018"),
+                            Id = new Guid("9bf1219b-70fb-40bd-bd8e-9294fc078226"),
                             Density = 0.36659999999999998,
                             DynamicViscosity = 4.1130000000000001E-05,
                             FluidId = new Guid("11111111-1111-1111-1111-111111111111"),
@@ -321,7 +324,7 @@ namespace HeatSphere.Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("00000000-0000-0000-0000-000000000019"),
+                            Id = new Guid("74e39d2e-9f35-4704-984f-00038d3ddb0d"),
                             Density = 0.34820000000000001,
                             DynamicViscosity = 4.244E-05,
                             FluidId = new Guid("11111111-1111-1111-1111-111111111111"),
@@ -334,7 +337,7 @@ namespace HeatSphere.Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("00000000-0000-0000-0000-000000000020"),
+                            Id = new Guid("7bd2eaa0-93f0-4591-98cc-6614844f8462"),
                             Density = 0.31659999999999999,
                             DynamicViscosity = 4.49E-05,
                             FluidId = new Guid("11111111-1111-1111-1111-111111111111"),
@@ -347,7 +350,7 @@ namespace HeatSphere.Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("00000000-0000-0000-0000-000000000021"),
+                            Id = new Guid("70f8ccd8-55e3-4e7a-bd96-bd180a5a02c4"),
                             Density = 0.29020000000000001,
                             DynamicViscosity = 4.7299999999999998E-05,
                             FluidId = new Guid("11111111-1111-1111-1111-111111111111"),
@@ -360,7 +363,7 @@ namespace HeatSphere.Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("00000000-0000-0000-0000-000000000022"),
+                            Id = new Guid("e6eeaf04-da3d-4934-ae95-e99b51a2decb"),
                             Density = 0.26790000000000003,
                             DynamicViscosity = 4.9599999999999999E-05,
                             FluidId = new Guid("11111111-1111-1111-1111-111111111111"),
@@ -373,7 +376,7 @@ namespace HeatSphere.Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("00000000-0000-0000-0000-000000000023"),
+                            Id = new Guid("cbc1d0fe-617b-45b2-823e-c36e63b3f4d9"),
                             Density = 0.24879999999999999,
                             DynamicViscosity = 5.3000000000000001E-05,
                             FluidId = new Guid("11111111-1111-1111-1111-111111111111"),
@@ -386,7 +389,7 @@ namespace HeatSphere.Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("00000000-0000-0000-0000-000000000024"),
+                            Id = new Guid("3cdf2121-09d1-4554-ab39-e6a5e2895c88"),
                             Density = 0.23219999999999999,
                             DynamicViscosity = 5.5699999999999999E-05,
                             FluidId = new Guid("11111111-1111-1111-1111-111111111111"),
@@ -399,7 +402,7 @@ namespace HeatSphere.Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("00000000-0000-0000-0000-000000000025"),
+                            Id = new Guid("c1c937a7-83fe-4baa-988e-5a14d0703bc3"),
                             Density = 0.2177,
                             DynamicViscosity = 5.8400000000000003E-05,
                             FluidId = new Guid("11111111-1111-1111-1111-111111111111"),
@@ -412,7 +415,7 @@ namespace HeatSphere.Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("00000000-0000-0000-0000-000000000026"),
+                            Id = new Guid("8b7b5992-72b0-45ad-9c9b-3e5b45b8bdbd"),
                             Density = 0.2049,
                             DynamicViscosity = 6.1099999999999994E-05,
                             FluidId = new Guid("11111111-1111-1111-1111-111111111111"),
@@ -425,7 +428,7 @@ namespace HeatSphere.Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("00000000-0000-0000-0000-000000000027"),
+                            Id = new Guid("5cb5ad5e-79eb-45f4-b25f-c93274ab427a"),
                             Density = 0.19350000000000001,
                             DynamicViscosity = 6.3700000000000003E-05,
                             FluidId = new Guid("11111111-1111-1111-1111-111111111111"),
@@ -438,7 +441,7 @@ namespace HeatSphere.Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("00000000-0000-0000-0000-000000000028"),
+                            Id = new Guid("16a593ee-860f-4933-af6b-477a5ab928b6"),
                             Density = 0.18329999999999999,
                             DynamicViscosity = 6.6299999999999999E-05,
                             FluidId = new Guid("11111111-1111-1111-1111-111111111111"),
@@ -451,7 +454,7 @@ namespace HeatSphere.Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("00000000-0000-0000-0000-000000000029"),
+                            Id = new Guid("863e4fc3-77c0-4ba5-b5c0-1b584e92b5dd"),
                             Density = 0.1741,
                             DynamicViscosity = 6.8899999999999994E-05,
                             FluidId = new Guid("11111111-1111-1111-1111-111111111111"),
@@ -464,7 +467,7 @@ namespace HeatSphere.Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("00000000-0000-0000-0000-000000000030"),
+                            Id = new Guid("80ad9b63-07cb-49f0-bd05-0083814f8b8c"),
                             Density = 0.1658,
                             DynamicViscosity = 7.1500000000000003E-05,
                             FluidId = new Guid("11111111-1111-1111-1111-111111111111"),
@@ -477,7 +480,7 @@ namespace HeatSphere.Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("00000000-0000-0000-0000-000000000031"),
+                            Id = new Guid("ab3d341f-1eff-4c04-85b2-640a2e9e8a22"),
                             Density = 0.15820000000000001,
                             DynamicViscosity = 7.3999999999999996E-05,
                             FluidId = new Guid("11111111-1111-1111-1111-111111111111"),
@@ -490,7 +493,7 @@ namespace HeatSphere.Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("00000000-0000-0000-0000-000000000032"),
+                            Id = new Guid("70d0c3da-abe0-4f8d-ba90-9b0eb0ee40f8"),
                             Density = 0.15129999999999999,
                             DynamicViscosity = 7.6600000000000005E-05,
                             FluidId = new Guid("11111111-1111-1111-1111-111111111111"),
@@ -503,7 +506,7 @@ namespace HeatSphere.Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("00000000-0000-0000-0000-000000000033"),
+                            Id = new Guid("2889170b-aa4a-4c91-8b66-207bea20e1de"),
                             Density = 0.14480000000000001,
                             DynamicViscosity = 7.9200000000000001E-05,
                             FluidId = new Guid("11111111-1111-1111-1111-111111111111"),
@@ -516,7 +519,7 @@ namespace HeatSphere.Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("00000000-0000-0000-0000-000000000034"),
+                            Id = new Guid("0cf0b9f4-44d0-42e2-bc16-70ea3b1fd925"),
                             Density = 0.1389,
                             DynamicViscosity = 8.1799999999999996E-05,
                             FluidId = new Guid("11111111-1111-1111-1111-111111111111"),
@@ -529,7 +532,7 @@ namespace HeatSphere.Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("00000000-0000-0000-0000-000000000035"),
+                            Id = new Guid("562cea6e-fb3a-443f-82a2-e74bb326b036"),
                             Density = 0.1135,
                             DynamicViscosity = 9.5500000000000004E-05,
                             FluidId = new Guid("11111111-1111-1111-1111-111111111111"),

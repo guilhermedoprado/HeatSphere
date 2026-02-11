@@ -1,26 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
+﻿using HeatSphere.Domain.Entities;
 using HeatSphere.Domain.Common;
-using HeatSphere.Domain.HeatExchangers;
 
-namespace HeatSphere.Application.HeatExchangers;
+namespace HeatSphere.Application.Features.HeatExchangers.RateShellAndTube;
 
-public sealed record RateShellAndTube12Request(double ThInC, double ThOutC, double TcInC, double TcOutC);
-
-public sealed record RateShellAndTube12Response(
-    double DeltaT1,
-    double DeltaT2,
-    double LmtdCounterflow,
-    double P,
-    double R,
-    double F,
-    double LmtdCorrected);
-
-public sealed class RateShellAndTube12WithLmtd
+public sealed class RateShellAndTubeHandler
 {
-    public RateShellAndTube12Response Execute(RateShellAndTube12Request req)
+    public RateShellAndTubeOutput Execute(RateShellAndTubeInput req) // Execute pois é síncrono (não depende da DB); Handle pra async
     {
         var temps = new TerminalTemperatures(
             Temperature.FromCelsius(req.ThInC),
@@ -86,6 +71,6 @@ public sealed class RateShellAndTube12WithLmtd
 
         var lmtdCorr = F * lmtd;
 
-        return new RateShellAndTube12Response(dT1, dT2, lmtd, P, R, F, lmtdCorr);
+        return new RateShellAndTubeOutput(dT1, dT2, lmtd, P, R, F, lmtdCorr);
     }
 }

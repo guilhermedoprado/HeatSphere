@@ -1,11 +1,22 @@
-using HeatSphere.Application.HeatExchangers;
+﻿using HeatSphere.Application.Features.HeatExchangers.RateShellAndTube;
+using HeatSphere.Application.Features.ExternalFlow.CalculateCylinder;
+using HeatSphere.Application.Interfaces;
+using HeatSphere.Application.Services;
+using HeatSphere.Domain.Common;
+using HeatSphere.Domain.Entities;
+using HeatSphere.Domain.Interfaces;
 using HeatSphere.Infrastructure;
+using HeatSphere.Infrastructure.Repositories;
+using HeatSphere.Infrastructure.Persistence;
+using Microsoft.AspNetCore.Http.HttpResults;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Swagger / OpenAPI
 builder.Services.AddEndpointsApiExplorer(); // allow Swagger to find endpoints
-builder.Services.AddSwaggerGen(); 
+builder.Services.AddSwaggerGen();
+builder.Services.AddControllers();
 
 // CORS (para React em http://localhost:5173)
 const string CorsPolicy = "FrontendDev";
@@ -19,9 +30,17 @@ builder.Services.AddCors(options =>
 
 // Infrastructure (PostgreSQL + DbContext)
 builder.Services.AddInfrastructure(builder.Configuration);
+builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(CalculateCylinderFlowHandler).Assembly));
 
-// Use cases
-builder.Services.AddSingleton<RateShellAndTube12WithLmtd>();
+
+// 
+builder.Services.AddScoped<RateShellAndTubeHandler>();
+// Registra o Repositório
+builder.Services.AddScoped<IFluidRepository, FluidRepository>();
+
+// O Serviço já estava lá, só confirma
+builder.Services.AddScoped<FluidInterpolationService>();
+
 
 var app = builder.Build();
 
@@ -29,12 +48,61 @@ app.UseCors(CorsPolicy); // allow CORS globally
 
 app.UseSwagger();
 app.UseSwaggerUI();
+app.MapControllers();
+
+// ── Auto-apply migrations on startup (dev only) ─────────────
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+    await db.Database.MigrateAsync();
+}
 
 var api = app.MapGroup("/api");
 
-// endpoint de exemplo (o seu rating)
-api.MapPost("/heat-exchangers/shell-tube/1-2/rating",
-    (RateShellAndTube12Request req, RateShellAndTube12WithLmtd useCase) =>
-        TypedResults.Ok(useCase.Execute(req)));
+// ── Notes CRUD ──────────────────────────────────────────────
+var notes = api.MapGroup("/notes");
+
+notes.MapGet("/", async (INoteRepository repo, CancellationToken ct) =>
+    TypedResults.Ok(await repo.GetAllAsync(ct)));
+
+notes.MapGet("/{id:guid}", async Task<Results<Ok<Note>, NotFound>> (Guid id, INoteRepository repo, CancellationToken ct) =>
+    await repo.GetByIdAsync(id, ct) is { } note
+        ? TypedResults.Ok(note)
+        : TypedResults.NotFound());
+
+notes.MapPost("/", async (Note note, INoteRepository repo, CancellationToken ct) =>
+{
+    await repo.AddAsync(note, ct);
+    await repo.SaveChangesAsync(ct);
+    return TypedResults.Created($"/api/notes/{note.Id}", note);
+});
+
+notes.MapPut("/{id:guid}", async Task<Results<NoContent, NotFound>> (Guid id, Note updated, INoteRepository repo, CancellationToken ct) =>
+{
+    var existing = await repo.GetByIdAsync(id, ct);
+    if (existing is null) return TypedResults.NotFound();
+
+    existing.Title = updated.Title;
+    existing.Subject = updated.Subject;
+    existing.ContentMarkdown = updated.ContentMarkdown;
+    existing.BriefDefinition = updated.BriefDefinition;
+    existing.SortOrder = updated.SortOrder;
+    existing.Tags = updated.Tags;
+    existing.UpdatedAt = DateTime.UtcNow;
+
+    repo.Update(existing);
+    await repo.SaveChangesAsync(ct);
+    return TypedResults.NoContent();
+});
+
+notes.MapDelete("/{id:guid}", async Task<Results<NoContent, NotFound>> (Guid id, INoteRepository repo, CancellationToken ct) =>
+{
+    var existing = await repo.GetByIdAsync(id, ct);
+    if (existing is null) return TypedResults.NotFound();
+
+    repo.Delete(existing);
+    await repo.SaveChangesAsync(ct);
+    return TypedResults.NoContent();
+});
 
 app.Run();
