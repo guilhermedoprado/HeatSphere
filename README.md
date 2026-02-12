@@ -46,15 +46,15 @@ API (Swagger): http://localhost:8080/swagger
 
 I am currently working on expanding the platform. Future updates will include:
 
- Additional Modes: Modules for Conduction and Radiation heat transfer.
+ - Additional Modes: Modules for Conduction and Radiation heat transfer.
 
- User Accounts: Authentication to save progress and "My Notebook" data.
+ - User Accounts: Authentication to save progress and "My Notebook" data.
 
- Complex Solvers: Heat Exchanger (NTU-method) calculators.
+ - Complex Solvers: Heat Exchanger (NTU-method) calculators.
 
- UI Polish: Dark mode support and mobile responsiveness improvements.
+ - UI Polish: Dark mode support and mobile responsiveness improvements.
 
- Testing: comprehensive unit testing for calculation engines.
+ - Testing: comprehensive unit testing for calculation engines.
 
 ## 🤝 Contributing
 
