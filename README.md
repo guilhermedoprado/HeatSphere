@@ -34,6 +34,7 @@ You can spin up the full stack (Frontend + API) with a single command.
 
 ```bash
 docker compose up -d --build
+```
 
 Once the containers are running, access the services here:
 
