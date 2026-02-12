@@ -58,14 +58,16 @@ I am currently working on expanding the platform. Future updates will include:
 
 ## 🤝 Contributing
 
-Contributions are welcome! If you have suggestions for new engineering modules or UI improvements:
+Contributions are welcome! 
 
-Fork the repository.
+If you have suggestions for new engineering modules or UI improvements:
 
-Create a new Feature Branch (git checkout -b feature/AmazingFeature).
+- Fork the repository.
 
-Commit your changes (git commit -m 'Add some AmazingFeature').
+- Create a new Feature Branch (git checkout -b feature/AmazingFeature).
 
-Push to the branch (git push origin feature/AmazingFeature).
+- Commit your changes (git commit -m 'Add some AmazingFeature').
 
-Open a Pull Request.
+- Push to the branch (git push origin feature/AmazingFeature).
+
+- Open a Pull Request.
