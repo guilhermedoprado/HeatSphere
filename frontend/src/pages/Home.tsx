@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import styles from './Home.module.css';
 
-// Componentes
+// Components
 import Header from '../components/layout/Header'; // Certifique-se que Header aceita className ou style para transparência
 import Hero from '../features/landing-page/components/Hero';
 import Footer from '../features/landing-page/components/Footer';
@@ -10,7 +10,7 @@ import Footer from '../features/landing-page/components/Footer';
 import bgImage from '../assets/wood-stick-burning-high-angle.jpg';
 
 const Home = () => {
-    // Função helper para scroll suave
+    // Helper function for smooth scrolling
     const scrollToContent = () => {
         document.getElementById('content')?.scrollIntoView({ behavior: 'smooth' });
     };
@@ -21,7 +21,7 @@ const Home = () => {
             {/* Full-screen landing section */}
             <section className={styles.landing}>
                 
-                {/* Header Flutuante (Transparente) */}
+                {/* Floating Header (Transparent) */}
                 <div className={styles.absoluteHeader}>
                     <Header /> 
                 </div>
@@ -30,12 +30,12 @@ const Home = () => {
                 <img src={bgImage} alt="Burning match stick" className={styles.bgImage} />
                 <div className={styles.overlay} />
 
-                {/* Conteúdo Central */}
+                {/* Central Content */}
                 <div className={styles.brandCenter}>
                     <h1 className={styles.brandTitle}>HeatSphere</h1>
                     <p className={styles.brandTagline}>Convective Heat Transfer — Visualized</p>
                     
-                    {/* Botões de Ação (CTA) */}
+                    {/* CTAs */}
                     <div className={styles.ctaGroup}>
                         <Link to="/modules" className={styles.btnPrimary}>
                             Explore Modules
@@ -46,7 +46,7 @@ const Home = () => {
                     </div>
                 </div>
 
-                {/* Scroll Hint (Seta para baixo) */}
+                {/* Scroll Hint */}
                 <div 
                     className={styles.scrollHint} 
                     onClick={scrollToContent} 
@@ -58,13 +58,11 @@ const Home = () => {
                     &#8595;
                 </div>
             </section>
-
-            {/* Conteúdo "Abaixo da Dobra" */}
+            {/* Main Content Section */}
             <main id="content" className={styles.main}>
                 <Hero /> 
-                {/* Aqui entra o conteúdo explicativo que estava no seu Hero antigo */}
             </main>
-
+            {/* Footer Section */}
             <div className={styles.footer}>
                 <Footer />
             </div>

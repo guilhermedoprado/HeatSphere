@@ -5,4 +5,7 @@
     <Project Path="backend/HeatSphere.Domain/HeatSphere.Domain.csproj" />
     <Project Path="backend/HeatSphere.Infrastructure/HeatSphere.Infrastructure.csproj" />
   </Folder>
+  <Folder Name="/Solution Items/">
+    <File Path="docker-compose.yml" />
+  </Folder>
 </Solution>
