@@ -17,13 +17,14 @@ Heat Sphere is an interactive learning platform designed to help students and en
 
 **Frontend**
 *   **React:** UI Library
+*   **TypeScript:** Static typing for better code quality
 *   **Vite:** Build tool and development server
 *   **React Router:** Client-side routing
 *   **CSS Modules:** Scoped styling for components
 
 **Backend**
 *   **API:** RESTful service with Swagger/OpenAPI documentation
-*   **Language:** C# / .NET [type:memory:1] *(Adjust if using a different backend language)*
+*   **Framework:** ASP.NET Core (C#)
 
 **DevOps**
 *   **Docker & Docker Compose:** Containerization for easy deployment
