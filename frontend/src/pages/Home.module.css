@@ -1,10 +1,160 @@
+/* Container principal ocupa a tela toda */
 .container {
-  background: linear-gradient(135deg, #ff4500 0%, #ffa500 60%, #1e90ff 100%);
   min-height: 100vh;
-  padding: 2rem;
+  display: flex;
+  flex-direction: column;
 }
 
+/* Landing Section (Tela Cheia) */
+.landing {
+  position: relative;
+  height: 100vh; /* Ocupa 100% da altura da viewport */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  color: #fff; /* Texto branco sobre imagem escura */
+}
+
+/* Header Flutuante */
+.absoluteHeader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 20; /* Fica acima da imagem e overlay */
+  /* Dica: Seu componente Header deve ter background transparente ou rgba(0,0,0,0.5) */
+}
+
+/* Imagem de Fundo */
+.bgImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* Overlay Escuro (para ler o texto) */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Ajuste a opacidade conforme necessário */
+  z-index: 1;
+}
+
+/* Conteúdo Centralizado */
+.brandCenter {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 800px;
+  padding: 0 1rem;
+}
+
+.brandTitle {
+  font-size: 4rem;
+  font-weight: 800;
+  margin: 0;
+  letter-spacing: -0.02em;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+.brandTagline {
+  font-size: 1.5rem;
+  font-weight: 300;
+  opacity: 0.9;
+  margin: 0;
+}
+
+/* Botões CTA */
+.ctaGroup {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.btnPrimary, .btnSecondary {
+  padding: 0.8rem 2rem;
+  border-radius: 50px; /* Botões arredondados modernos */
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  font-size: 1rem;
+}
+
+.btnPrimary {
+  background: #fff;
+  color: #000;
+}
+
+.btnPrimary:hover {
+  background: #f0f0f0;
+  transform: translateY(-2px);
+}
+
+.btnSecondary {
+  background: transparent;
+  color: #fff;
+  border: 2px solid rgba(255,255,255,0.8);
+}
+
+.btnSecondary:hover {
+  background: rgba(255,255,255,0.1);
+  border-color: #fff;
+}
+
+/* Scroll Hint */
+.scrollHint {
+  position: absolute;
+  bottom: 2rem;
+  z-index: 10;
+  font-size: 2rem;
+  cursor: pointer;
+  animation: bounce 2s infinite;
+  opacity: 0.8;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+  40% {transform: translateY(-10px);}
+  60% {transform: translateY(-5px);}
+}
+
+/* Main Content */
 .main {
+  position: relative;
+  z-index: 2;
+  background: #fff; /* Fundo branco para o conteúdo de texto */
+  min-height: 50vh; /* Garante que tenha algum tamanho */
+}
+
+.features {
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 12px;
+  padding: 2rem;
+  color: #1f2933;
+}
+
+.featureGrid {
   display: grid;
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.feature {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.25rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
 }

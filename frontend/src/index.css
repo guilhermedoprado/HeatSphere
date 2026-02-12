@@ -13,6 +13,12 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 a {
   font-weight: 500;
   color: #646cff;
@@ -24,8 +30,6 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
 }
@@ -65,4 +69,26 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+/* Center display math ($$...$$) globally */
+.katex-display {
+  display: block !important;
+  text-align: center !important;
+  margin: 1.25rem 0 !important;
+  overflow-x: auto;
+  width: 100%;
+}
+
+.math-display,
+.math.math-display {
+  display: block !important;
+  text-align: center !important;
+  margin: 1.25rem 0 !important;
+}
+
+.markdown-preview :global(.katex-display),
+.markdown-preview :global(.math-display) {
+  text-align: center !important;
+  margin: 1.25rem 0 !important;
 }

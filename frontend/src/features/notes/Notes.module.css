@@ -1,0 +1,498 @@
+﻿.container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+}
+
+/* ── Sidebar ── */
+.sidebar {
+  width: 280px;
+  min-width: 280px;
+  background: #f7f6f3;
+  border-right: 1px solid #e5e5e3;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.sidebarHeader {
+  padding: 1.25rem 1rem 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.sidebarHeader h2 {
+  margin: 0;
+  font-family: 'Outfit', 'Inter', system-ui, sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #37352f;
+}
+
+.newBtn {
+  width: 100%;
+  padding: 0.7rem 0.75rem;
+  background: #111;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  transition: background 0.15s;
+}
+
+.newBtn:hover {
+  background: #333;
+}
+
+/* ── Folder actions ── */
+.folderActions {
+  padding: 0 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.addFolderBtn {
+  width: 100%;
+  padding: 0.45rem 0.75rem;
+  background: #e5e5e3;
+  color: #37352f;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: background 0.15s;
+}
+
+.addFolderBtn:hover {
+  background: #d4d4d2;
+}
+
+.newFolderRow {
+  display: flex;
+  gap: 0.35rem;
+  align-items: center;
+}
+
+.newFolderInput {
+  flex: 1;
+  padding: 0.3rem 0.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  background: #fff;
+  color: #37352f;
+}
+
+.newFolderConfirm {
+  background: #111;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 0.3rem 0.6rem;
+  font-size: 0.75rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.newFolderCancel {
+  background: none;
+  border: none;
+  color: #9ca3af;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0 0.25rem;
+}
+
+/* ── Folder tree ── */
+.tree {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0 0 1rem;
+}
+
+.folderGroup {
+  margin-bottom: 0.15rem;
+}
+
+.folderHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #6b7280;
+  text-align: left;
+  transition: background 0.1s;
+}
+
+.folderHeader:hover {
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.folderDropTarget {
+  background: #e0edff;
+  outline: 2px dashed #3b82f6;
+  outline-offset: -2px;
+  border-radius: 4px;
+}
+
+.item[draggable] {
+  cursor: grab;
+}
+
+.item[draggable]:active {
+  cursor: grabbing;
+  opacity: 0.6;
+}
+
+.folderChevron {
+  font-size: 0.75rem;
+  width: 12px;
+  flex-shrink: 0;
+}
+
+.folderName {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.folderCount {
+  font-size: 0.7rem;
+  color: #9ca3af;
+  font-weight: 400;
+}
+
+.folderNotes {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.item {
+  position: relative;
+  padding: 0.5rem 1rem 0.5rem 2.2rem;
+  cursor: pointer;
+  font-size: 0.95rem;
+  color: #37352f;
+  transition: background 0.1s;
+  overflow: visible;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.item:hover {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.active {
+  background: rgba(0, 0, 0, 0.06);
+  font-weight: 600;
+}
+
+.addInFolder {
+  padding: 0.35rem 1rem 0.35rem 2.2rem;
+  cursor: pointer;
+  font-size: 0.88rem;
+  color: #9ca3af;
+  transition: color 0.15s;
+}
+
+.addInFolder:hover {
+  color: #37352f;
+}
+
+/* ── Editor ── */
+.editor {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 1.5rem;
+  gap: 0.5rem;
+  overflow: hidden;
+  background: #fff;
+  min-height: 0;
+}
+
+.fields {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.fields input {
+  flex: 1;
+  padding: 0.55rem 0.75rem;
+  border-radius: 6px;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  color: #37352f;
+  font-size: 0.95rem;
+  transition: border-color 0.15s;
+}
+
+.fields input:focus {
+  outline: none;
+  border-color: #111;
+}
+
+.mdEditor {
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Wrapper div from MarkdownEditor component */
+.mdEditor > div {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* The w-md-editor root: flex column so toolbar + content stack */
+.mdEditor :global(.w-md-editor) {
+  flex: 1 !important;
+  min-height: 0 !important;
+  height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+/* Content area fills remaining space */
+.mdEditor :global(.w-md-editor-content) {
+  flex: 1 !important;
+  min-height: 0 !important;
+  overflow: auto !important;
+}
+
+/* Editor input pane scrolls */
+.mdEditor :global(.w-md-editor-input) {
+  flex: 1 !important;
+  min-height: 0 !important;
+  overflow: auto !important;
+}
+
+/* The actual editing textarea area */
+.mdEditor :global(.w-md-editor-area) {
+  height: 100% !important;
+  min-height: 0 !important;
+  overflow-y: auto !important;
+}
+
+/* Preview pane scrolls */
+.mdEditor :global(.w-md-editor-preview) {
+  overflow-y: auto !important;
+}
+
+/* Larger editor font */
+.mdEditor :global(.w-md-editor-text-input),
+.mdEditor :global(.w-md-editor-text-pre),
+.mdEditor :global(.w-md-editor-text) {
+  font-size: 1.05rem !important;
+  line-height: 1.65 !important;
+}
+
+/* Larger preview font */
+.mdEditor :global(.wmde-markdown) {
+  font-size: 1.02rem !important;
+  line-height: 1.7 !important;
+}
+
+/* Center display math ($$...$$) in editor preview */
+.mdEditor :global(.katex-display) {
+  text-align: center !important;
+  margin: 1rem 0 !important;
+}
+
+.actions {
+  display: flex;
+  gap: 0.75rem;
+  padding-bottom: 0.25rem;
+}
+
+.saveBtn {
+  flex: 1;
+  padding: 0.65rem 2rem;
+  background: #111;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.saveBtn:hover:not(:disabled) {
+  background: #333;
+}
+
+.saveBtn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.error {
+  background: #fef2f2;
+  color: #b91c1c;
+  border: 1px solid #fecaca;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+}
+
+.deleteBtn {
+  flex: 1;
+  padding: 0.65rem 2rem;
+  background: #fff;
+  color: #b91c1c;
+  border: 1px solid #fecaca;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.deleteBtn:hover {
+  background: #fef2f2;
+}
+
+/* ── Note title in sidebar ── */
+.noteTitle {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex: 1;
+}
+
+/* ── Rename input ── */
+.renameInput {
+  width: 100%;
+  padding: 0.2rem 0.4rem;
+  border: 1px solid #111;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  background: #fff;
+  color: #37352f;
+  outline: none;
+}
+
+/* ── Context menu ── */
+.contextMenu {
+  position: fixed;
+  z-index: 1000;
+  background: #fff;
+  border: 1px solid #e5e5e3;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  padding: 0.35rem 0;
+  min-width: 180px;
+  animation: fadeIn 0.1s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.contextMenuItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.85rem;
+  color: #37352f;
+  text-align: left;
+  transition: background 0.1s;
+}
+
+.contextMenuItem:hover {
+  background: #f3f4f6;
+}
+
+.contextMenuDanger {
+  color: #b91c1c;
+}
+
+.contextMenuDanger:hover {
+  background: #fef2f2;
+}
+
+/* ── Move to folder dropdown ── */
+.moveDropdown {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  z-index: 100;
+  background: #fff;
+  border: 1px solid #e5e5e3;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 0.35rem 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.moveLabel {
+  padding: 0.3rem 0.75rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #9ca3af;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.moveOption {
+  padding: 0.4rem 0.75rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.8rem;
+  color: #37352f;
+  text-align: left;
+  transition: background 0.1s;
+}
+
+.moveOption:hover {
+  background: #f3f4f6;
+}
+
+.moveCancelBtn {
+  padding: 0.35rem 0.75rem;
+  background: none;
+  border: none;
+  border-top: 1px solid #e5e5e3;
+  cursor: pointer;
+  font-size: 0.78rem;
+  color: #9ca3af;
+  text-align: center;
+  margin-top: 0.2rem;
+  transition: color 0.15s;
+}
+
+.moveCancelBtn:hover {
+  color: #37352f;
+}

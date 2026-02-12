@@ -1,0 +1,80 @@
+/* ── Wiki-link inline element ── */
+.wikiLink {
+  cursor: pointer;
+  padding: 0 2px;
+  border-radius: 3px;
+  font-weight: 500;
+  transition: background 0.15s, color 0.15s;
+}
+
+.resolved {
+  color: #2563eb;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-underline-offset: 2px;
+}
+
+.resolved:hover {
+  background: #eff6ff;
+  color: #1d4ed8;
+  text-decoration-style: solid;
+}
+
+.unresolved {
+  color: #9ca3af;
+  text-decoration: underline;
+  text-decoration-style: dashed;
+  text-underline-offset: 2px;
+}
+
+.unresolved:hover {
+  color: #6b7280;
+  background: #f3f4f6;
+}
+
+/* ── Tooltip ── */
+.tooltip {
+  position: fixed;
+  z-index: 9999;
+  min-width: 180px;
+  max-width: 320px;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 0.65rem 0.85rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  pointer-events: auto;
+  animation: fadeIn 0.12s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.tooltipTitle {
+  font-weight: 700;
+  font-size: 0.875rem;
+  color: #111827;
+  margin-bottom: 0.3rem;
+}
+
+.tooltipDef {
+  font-size: 0.8rem;
+  color: #4b5563;
+  line-height: 1.4;
+}
+
+.tooltipEmpty {
+  font-size: 0.8rem;
+  color: #9ca3af;
+  font-style: italic;
+}
+
+.tooltipHint {
+  font-size: 0.7rem;
+  color: #9ca3af;
+  margin-top: 0.4rem;
+  border-top: 1px solid #f3f4f6;
+  padding-top: 0.3rem;
+}

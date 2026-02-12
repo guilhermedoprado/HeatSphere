@@ -2,28 +2,33 @@ import './App.css'
 import { Route, Routes } from 'react-router-dom'
 import Home from './pages/Home'
 import Modules from './pages/Modules'
-import IntroductionToConvection from './components/modules/IntroductionToConvection/IntroductionToConvection'
-import ExternalFlow from './components/modules/ExternalFlow/ExternalFlow'
-import InternalFlow from './components/modules/InternalFlow/InternalFlow'
-import HeatExchangers from './components/modules/HeatExchangers/HeatExchangers'
-import FreeConvection from './components/modules/FreeConvection/FreeConvection'
-import Boiling from './components/modules/Boiling/Boiling'
-import Condensation from './components/modules/Condensation/Condensation'
-import IntroductionToConvectionText from './components/texts/IntroductionToConvectionText'
+import ModuleHub from './pages/ModuleHub'
+import Notes from './features/notes/Notes'
+import NoteView from './features/notes/NoteView'
+import { ShellTubeRating } from './features/heat-exchangers/tools/ShellTubeRating'
+import { CylinderFlowCalculator } from './features/external-flow/tools/CylinderFlow'
 
 function App() {
   return (
     <Routes>
+      {/* --- HOMEPAGE --- */}
       <Route path="/" element={<Home />} />
+
+      {/* --- MODULES (catalog) --- */}
       <Route path="/modules" element={<Modules />} />
-      <Route path="/modules/introduction-to-convection" element={<IntroductionToConvection />} />
-      <Route path="/modules/introduction-to-convection/documentation" element={<IntroductionToConvectionText />} />      
-      <Route path="/modules/external-flow" element={<ExternalFlow />} />
-      <Route path="/modules/internal-flow" element={<InternalFlow />} />
-      <Route path="/modules/heat-exchangers" element={<HeatExchangers />} />
-      <Route path="/modules/free-convection" element={<FreeConvection />} />
-      <Route path="/modules/boiling" element={<Boiling />} />
-      <Route path="/modules/condensation" element={<Condensation />} />
+      
+      {/* MODULE HUB (modules/internal-flow) */}
+      <Route path="/modules/:slug" element={<ModuleHub />} />
+
+      {/* --- TOOLS --- */}
+      <Route path="/modules/heat-exchangers/tool/case-study/shell-tube-rating" element={<ShellTubeRating />} />
+      <Route path="/modules/external-flow/tool/solver/cylinder-flow" element={<CylinderFlowCalculator />} />
+
+      {/* --- NOTES & FORMULARY --- */}
+      <Route path="/modules/:slug/:category" element={<NoteView />} />
+
+      {/* MY NOTES */}
+      <Route path="/my-notes" element={<Notes />} />
     </Routes>
   )
 }

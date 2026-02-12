@@ -1,0 +1,108 @@
+.container {
+  min-height: 100vh;
+  background: #ffffff;
+  color: #37352f;
+  padding: 2.5rem 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 900px;
+}
+
+.header h1 {
+  margin: 0;
+  font-family: 'Outfit', 'Inter', system-ui, sans-serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #111;
+}
+
+.subtitle {
+  margin: 0.3rem 0 0;
+  color: #6b7280;
+  font-size: 0.95rem;
+}
+
+.back {
+  color: #6b7280;
+  text-decoration: none;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  transition: color 0.15s;
+}
+
+.back:hover {
+  color: #111;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  gap: 1rem;
+  max-width: 900px;
+  width: 100%;
+}
+
+.card {
+  display: block;
+  padding: 1.25rem 1.5rem;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #37352f;
+  transition: background 0.15s, border-color 0.15s, box-shadow 0.15s;
+}
+
+.card:hover {
+  background: #f3f4f6;
+  border-color: #d1d5db;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.cardBody {
+  flex: 1;
+  min-width: 0;
+}
+
+.module {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #9ca3af;
+  font-weight: 600;
+}
+
+.cardBody h3 {
+  margin: 0.2rem 0 0.35rem;
+  font-family: 'Outfit', 'Inter', system-ui, sans-serif;
+  font-size: 1.05rem;
+  color: #111;
+  font-weight: 600;
+}
+
+.cardBody p {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #6b7280;
+  line-height: 1.5;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 1.5rem 1rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

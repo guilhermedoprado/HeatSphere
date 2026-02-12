@@ -1,0 +1,349 @@
+/* ── Academic / LaTeX-style document layout ── */
+
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Source+Code+Pro:wght@400;500&display=swap');
+
+.container {
+  min-height: 100vh;
+  background: #f5f5f0;
+  color: #1a1a1a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem 4rem;
+}
+
+/* ── Navigation ── */
+.nav {
+  width: 100%;
+  max-width: 780px;
+  margin-bottom: 0.75rem;
+}
+
+.back {
+  color: #6b7280;
+  text-decoration: none;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.8rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  transition: color 0.15s;
+}
+
+.back:hover {
+  color: #111;
+}
+
+/* ── Title page / header ── */
+.header {
+  width: 100%;
+  max-width: 780px;
+  margin-bottom: 0;
+  padding: 2.5rem 3.5rem 2rem;
+  background: #fff;
+  border: 1px solid #d4d4d0;
+  border-bottom: none;
+  border-radius: 2px 2px 0 0;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+  text-align: center;
+}
+
+.categoryBadge {
+  display: inline-block;
+  font-family: 'EB Garamond', 'Georgia', serif;
+  font-size: 0.85rem;
+  font-variant: small-caps;
+  letter-spacing: 0.12em;
+  text-transform: lowercase;
+  color: #6b7280;
+  margin-bottom: 0.6rem;
+}
+
+.header h1 {
+  margin: 0;
+  font-family: 'EB Garamond', 'Georgia', 'Times New Roman', serif;
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: #111;
+  text-align: center;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+}
+
+.meta {
+  margin: 0.6rem 0 0;
+  font-family: 'EB Garamond', 'Georgia', serif;
+  font-size: 1.05rem;
+  color: #444;
+  text-align: center;
+  font-style: italic;
+}
+
+.date {
+  margin: 0.3rem 0 0;
+  font-family: 'EB Garamond', 'Georgia', serif;
+  font-size: 0.88rem;
+  color: #9ca3af;
+  text-align: center;
+}
+
+/* ── Table of Contents ── */
+.toc {
+  width: 100%;
+  max-width: 780px;
+  background: #fff;
+  border: 1px solid #d4d4d0;
+  border-top: none;
+  padding: 1.25rem 3.5rem;
+  font-family: 'EB Garamond', 'Georgia', serif;
+}
+
+.tocTitle {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  font-variant: small-caps;
+  letter-spacing: 0.08em;
+  color: #6b7280;
+}
+
+.tocList {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.tocList li {
+  margin-bottom: 0.3rem;
+}
+
+.tocLink {
+  font-size: 1.05rem;
+  color: #374151;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.tocLink:hover {
+  color: #111;
+  text-decoration: underline;
+}
+
+/* ── Content area (the "paper") ── */
+.content {
+  background: #fff;
+  color: #1a1a1a;
+  border: 1px solid #d4d4d0;
+  border-top: none;
+  border-radius: 0 0 2px 2px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+  padding: 2rem 3.5rem 3rem;
+  max-width: 780px;
+  width: 100%;
+  font-family: 'EB Garamond', 'Georgia', 'Times New Roman', serif;
+  font-size: 1.1rem;
+  line-height: 1.75;
+}
+
+/* When multiple notes, remove bottom radius from all but last */
+.content + .content {
+  border-radius: 0;
+}
+
+.noteSection {
+  font-family: 'EB Garamond', 'Georgia', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111;
+  margin: 0 0 1rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 2px solid #374151;
+  text-align: center;
+}
+
+/* ── Headings ── */
+.content h1 {
+  font-family: 'EB Garamond', 'Georgia', serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #111;
+  margin: 2.5rem 0 0.75rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid #e5e5e0;
+  text-align: center;
+}
+
+.content h2 {
+  font-family: 'EB Garamond', 'Georgia', serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #222;
+  margin: 2rem 0 0.6rem;
+  text-align: left;
+}
+
+.content h3 {
+  font-family: 'EB Garamond', 'Georgia', serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  font-style: italic;
+  color: #333;
+  margin: 1.5rem 0 0.5rem;
+}
+
+/* ── Paragraphs ── */
+.content p {
+  margin: 0.6rem 0;
+  text-align: justify;
+  hyphens: auto;
+}
+
+/* ── Blockquotes → definition/remark boxes ── */
+.content blockquote {
+  margin: 1.25rem 0;
+  padding: 0.75rem 1.25rem;
+  border-left: 3px solid #374151;
+  background: #fafaf8;
+  font-style: italic;
+  color: #374151;
+}
+
+/* ── Math blocks: centered with spacing ── */
+.content :global(.math-display),
+.content :global(.math),
+.content :global(.katex-display) {
+  display: block !important;
+  margin: 1.25rem 0 !important;
+  overflow-x: auto;
+  text-align: center !important;
+  width: 100%;
+}
+
+.content :global(.katex-display) > :global(.katex) {
+  text-align: center !important;
+}
+
+.content :global(.katex-html) {
+  text-align: center !important;
+}
+
+/* ── Horizontal rules → section dividers ── */
+.content hr {
+  border: none;
+  border-top: 1px solid #d4d4d0;
+  margin: 2rem 3rem;
+}
+
+/* ── Tables ── */
+.content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.25rem 0;
+  font-size: 0.95rem;
+}
+
+.content th,
+.content td {
+  border: 1px solid #d4d4d0;
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+}
+
+.content th {
+  background: #f7f7f5;
+  font-weight: 600;
+  font-family: 'EB Garamond', 'Georgia', serif;
+}
+
+/* ── Inline code ── */
+.content code {
+  background: #f3f4f6;
+  padding: 0.12rem 0.4rem;
+  border-radius: 3px;
+  font-family: 'Source Code Pro', 'Consolas', monospace;
+  font-size: 0.85em;
+}
+
+/* ── Code blocks ── */
+.content pre {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+  padding: 1rem;
+  overflow-x: auto;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.content pre code {
+  background: none;
+  padding: 0;
+}
+
+/* ── Lists ── */
+.content ul,
+.content ol {
+  padding-left: 1.5rem;
+  margin: 0.75rem 0;
+}
+
+.content li {
+  margin: 0.3rem 0;
+}
+
+.content li + li {
+  margin-top: 0.2rem;
+}
+
+/* ── Strong / bold — used for equation labels ── */
+.content strong {
+  font-weight: 700;
+  color: #111;
+}
+
+/* ── Emphasis ── */
+.content em {
+  font-style: italic;
+}
+
+/* ── Links ── */
+.content a {
+  color: #1d4ed8;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s;
+}
+
+.content a:hover {
+  border-bottom-color: #1d4ed8;
+}
+
+/* ── Error / status ── */
+.loading {
+  text-align: center;
+  padding: 4rem;
+  font-family: 'EB Garamond', 'Georgia', serif;
+  font-size: 1.2rem;
+  color: #9ca3af;
+  font-style: italic;
+}
+
+.error {
+  color: #ef4444;
+  font-size: 1.1rem;
+  margin: 2rem 0 0.5rem;
+}
+
+.hint {
+  color: #6b7280;
+  font-size: 0.95rem;
+}
+
+.hint a {
+  color: #3b82f6;
+}
+
+.hint code {
+  background: #f3f4f6;
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+}
