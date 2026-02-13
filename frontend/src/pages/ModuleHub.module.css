@@ -24,28 +24,29 @@
 .bannerOverlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, transparent 60%, rgba(255, 255, 255, 0.8) 100%);
+  background: linear-gradient(180deg, transparent 60%, rgba(255, 255, 255, 0.85) 100%);
 }
 
 /* ── Content area ── */
 .content {
-  max-width: 860px;
+  max-width: 900px;
   margin: 0 auto;
-  padding: 2.5rem 2rem 3rem;
+  padding: 3rem 2.5rem 4rem;
 }
 
 /* ── Header ── */
 .header {
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
 }
 
 .back {
   color: #6b7280;
   text-decoration: none;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   display: inline-block;
-  margin-bottom: 0.75rem;
-  transition: color 0.15s;
+  margin-bottom: 1rem;
+  transition: color 0.2s;
+  font-weight: 500;
 }
 
 .back:hover {
@@ -53,93 +54,138 @@
 }
 
 .chapter {
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   text-transform: uppercase;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.15em;
   color: #9ca3af;
   font-weight: 600;
   display: block;
+  margin-bottom: 0.5rem;
 }
 
 .header h1 {
-  margin: 0.25rem 0 0;
+  margin: 0;
   font-family: 'Outfit', 'Inter', system-ui, sans-serif;
-  font-size: 2.2rem;
+  font-size: 2.75rem;
   font-weight: 700;
   color: #111;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
 }
 
-/* ── Resource navigation ── */
+/* ── Resource navigation (DESTACADO) ── */
 .resourceNav {
   display: flex;
-  gap: 0.5rem;
-  margin-bottom: 2.5rem;
+  gap: 1rem;
+  margin-bottom: 3rem;
   flex-wrap: wrap;
 }
 
 .resourceCard {
-  padding: 0.5rem 1rem;
-  background: #f3f4f6;
-  border: 1px solid #e5e7eb;
-  border-radius: 6px;
-  color: #374151;
+  flex: 1;
+  min-width: 140px;
+  padding: 1rem 1.5rem;
+  background: #ffffff;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 10px;
+  color: #1f2937;
   text-decoration: none;
-  font-weight: 500;
-  font-size: 0.875rem;
-  transition: background 0.15s, border-color 0.15s;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
 .resourceCard:hover {
-  background: #e5e7eb;
+  background: #f9fafb;
   border-color: #d1d5db;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
 }
 
 /* ── Briefing ── */
 .briefing {
-  line-height: 1.75;
+  line-height: 1.8;
 }
 
 .briefing h2 {
-  margin: 0 0 0.75rem;
+  margin: 0 0 1rem;
   font-family: 'Outfit', 'Inter', system-ui, sans-serif;
-  font-size: 1.3rem;
-  font-weight: 600;
+  font-size: 1.6rem;
+  font-weight: 700;
   color: #111;
+  letter-spacing: -0.015em;
 }
 
 .briefing h3 {
-  margin: 1.5rem 0 0.75rem;
+  margin: 2rem 0 1rem;
   font-family: 'Outfit', 'Inter', system-ui, sans-serif;
-  font-size: 1.05rem;
+  font-size: 1.25rem;
   font-weight: 600;
-  color: #111;
+  color: #1f2937;
+  letter-spacing: -0.01em;
 }
 
 .briefing p {
-  margin: 0 0 1rem;
-  font-size: 0.95rem;
-  color: #37352f;
+  margin: 0 0 1.5rem;
+  font-size: 1.05rem;
+  color: #374151;
+  line-height: 1.75;
 }
 
+/* ── Custom Bullets (Modernos) ── */
 .briefing ul {
-  padding-left: 1.25rem;
+  padding-left: 0;
   margin: 0;
+  list-style: none;
 }
 
 .briefing li {
-  margin-bottom: 0.5rem;
-  font-size: 0.95rem;
-  color: #37352f;
+  margin-bottom: 0.9rem;
+  font-size: 1.05rem;
+  color: #374151;
+  padding-left: 1.75rem;
+  position: relative;
+  line-height: 1.7;
+}
+
+.briefing li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 6px;
+  height: 6px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
 }
 
 /* ── Responsive ── */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .content {
-    padding: 1.5rem 1rem;
+    padding: 2rem 1.5rem;
+  }
+
+  .header h1 {
+    font-size: 2.2rem;
   }
 
   .resourceNav {
     flex-direction: column;
+  }
+
+  .resourceCard {
+    min-width: unset;
+  }
+
+  .briefing h2 {
+    font-size: 1.4rem;
+  }
+
+  .briefing p,
+  .briefing li {
+    font-size: 1rem;
   }
 }

@@ -7,6 +7,8 @@ import Notes from './features/notes/Notes'
 import NoteView from './features/notes/NoteView'
 import { ShellTubeRating } from './features/heat-exchangers/tools/ShellTubeRating'
 import { CylinderFlowCalculator } from './features/external-flow/tools/CylinderFlow'
+import ToolHub from './pages/ToolHub'  // Solvers / cases 
+import ToolPage from './pages/ToolPage'  // Specific tool page (e.g. /internal-flow/tool/solvers)
 
 function App() {
   return (
@@ -17,14 +19,18 @@ function App() {
       {/* --- MODULES (catalog) --- */}
       <Route path="/modules" element={<Modules />} />
       
-      {/* MODULE HUB (modules/internal-flow) */}
+      {/* MODULE HUB */}
       <Route path="/modules/:slug" element={<ModuleHub />} />
 
-      {/* --- TOOLS --- */}
+      {/* --- SPECIFIC TOOLS --- */}
       <Route path="/modules/heat-exchangers/tool/case-study/shell-tube-rating" element={<ShellTubeRating />} />
-      <Route path="/modules/external-flow/tool/solver/cylinder-flow" element={<CylinderFlowCalculator />} />
+      <Route path="/modules/external-flow/tool/solver/cylinder" element={<CylinderFlowCalculator />} />
 
-      {/* --- NOTES & FORMULARY --- */}
+      {/* --- TOOL HUB (NEW: /internal-flow/tool) --- */}
+      <Route path="/modules/:slug/tool" element={<ToolHub />} />
+      <Route path="/modules/:slug/tool/:toolSlug" element={<ToolPage />} /> 
+
+      {/* --- NOTES --- */}
       <Route path="/modules/:slug/:category" element={<NoteView />} />
 
       {/* MY NOTES */}

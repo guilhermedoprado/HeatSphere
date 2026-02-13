@@ -117,7 +117,6 @@ const MODULE_DATA: Record<string, ModuleInfo> = {
 
 const RESOURCES = [
   { key: "notes", label: "Notes", path: "notes" },
-  { key: "formulary", label: "Formulary", path: "formulary" },
   { key: "tool", label: "Tools", path: "tool" },
 ];
 

@@ -2,7 +2,7 @@
   min-height: 100vh;
   background: #ffffff;
   color: #37352f;
-  padding: 2.5rem 3rem;
+  padding: 3rem 2.5rem 4rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,96 +10,158 @@
 
 .header {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 1.5rem;
-  margin-bottom: 2.5rem;
+  margin-bottom: 3rem;
   flex-wrap: wrap;
   width: 100%;
-  max-width: 900px;
+  max-width: 1020px;
 }
 
 .header h1 {
   margin: 0;
   font-family: 'Outfit', 'Inter', system-ui, sans-serif;
-  font-size: 2.2rem;
-  font-weight: 700;
+  font-size: 2.8rem;
+  font-weight: 750;
   color: #111;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
 }
 
 .subtitle {
-  margin: 0.3rem 0 0;
+  margin: 0.6rem 0 0;
   color: #6b7280;
-  font-size: 0.95rem;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  max-width: 60ch;
 }
 
 .back {
   color: #6b7280;
   text-decoration: none;
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   white-space: nowrap;
-  transition: color 0.15s;
+  transition: color 0.2s;
+  font-weight: 500;
+  padding-top: 0.4rem;
 }
 
 .back:hover {
   color: #111;
 }
 
+/* grid mais “premium”, cards maiores */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
-  gap: 1rem;
-  max-width: 900px;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 1.25rem;
+  max-width: 1020px;
   width: 100%;
 }
 
+/* card minimalista com elevação bonita */
 .card {
   display: block;
-  padding: 1.25rem 1.5rem;
-  background: #f9fafb;
-  border: 1px solid #e5e7eb;
-  border-radius: 10px;
+  padding: 1.6rem 1.7rem;
+  background: #ffffff;
+  border: 1px solid #eceef2;
+  border-radius: 16px;
   text-decoration: none;
-  color: #37352f;
-  transition: background 0.15s, border-color 0.15s, box-shadow 0.15s;
+  color: #111;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.06),
+    0 10px 24px rgba(0, 0, 0, 0.06);
+  position: relative;
+  overflow: hidden;
+}
+
+/* acento ultra discreto no topo (sem “muita cor”) */
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background: linear-gradient(90deg, rgba(17, 24, 39, 0.1), rgba(102, 126, 234, 0.25), rgba(17, 24, 39, 0.1));
+  opacity: 0.9;
 }
 
 .card:hover {
-  background: #f3f4f6;
-  border-color: #d1d5db;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transform: translateY(-4px);
+  border-color: #dfe3ea;
+  box-shadow:
+    0 2px 6px rgba(0, 0, 0, 0.08),
+    0 18px 44px rgba(0, 0, 0, 0.10);
 }
 
-.cardBody {
-  flex: 1;
-  min-width: 0;
+.cardTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
 }
 
 .module {
-  font-size: 0.7rem;
+  font-size: 0.78rem;
   text-transform: uppercase;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.14em;
   color: #9ca3af;
-  font-weight: 600;
+  font-weight: 700;
 }
 
-.cardBody h3 {
-  margin: 0.2rem 0 0.35rem;
+.icon {
+  font-size: 1.4rem;
+  opacity: 0.9;
+}
+
+.cardTitle {
+  margin: 0 0 0.55rem;
   font-family: 'Outfit', 'Inter', system-ui, sans-serif;
-  font-size: 1.05rem;
+  font-size: 1.35rem;
+  font-weight: 700;
   color: #111;
+  letter-spacing: -0.015em;
+  line-height: 1.25;
+}
+
+.cardDesc {
+  margin: 0;
+  font-size: 1.02rem;
+  color: #4b5563;
+  line-height: 1.65;
+}
+
+.cardBottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1.2rem;
+  color: #6b7280;
+  font-size: 0.95rem;
+}
+
+.open {
   font-weight: 600;
 }
 
-.cardBody p {
-  margin: 0;
-  font-size: 0.875rem;
-  color: #6b7280;
-  line-height: 1.5;
+.arrow {
+  transition: transform 0.18s ease;
+}
+
+.card:hover .arrow {
+  transform: translateX(4px);
 }
 
 @media (max-width: 600px) {
   .container {
-    padding: 1.5rem 1rem;
+    padding: 2rem 1.25rem 3rem;
+  }
+
+  .header h1 {
+    font-size: 2.2rem;
   }
 
   .grid {

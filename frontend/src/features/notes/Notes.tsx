@@ -3,6 +3,7 @@ import axios from "axios";
 import { MarkdownEditor } from "../../components/markdown/MarkdownEditor";
 import type { WikiNoteInfo } from "../../components/markdown/WikiLink";
 import styles from "./Notes.module.css";
+import { Link } from "react-router-dom";
 
 type Note = {
   id: string;
@@ -300,6 +301,7 @@ export default function Notes() {
       {/* Sidebar */}
       <aside className={styles.sidebar}>
         <div className={styles.sidebarHeader}>
+          <Link to="/" className={styles.backLink}>← Home</Link>
           <h2>Notes</h2>
           <button className={styles.newBtn} onClick={clearForm}>
             + New Note

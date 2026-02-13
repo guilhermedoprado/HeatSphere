@@ -496,3 +496,16 @@
 .moveCancelBtn:hover {
   color: #37352f;
 }
+
+.backLink {
+  display: inline-block;
+  color: #6b7280;
+  text-decoration: none;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  transition: color 0.2s;
+}
+
+.backLink:hover {
+  color: #374151;
+}

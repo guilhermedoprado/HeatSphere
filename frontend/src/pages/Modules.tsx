@@ -61,7 +61,7 @@ export default function Modules() {
         <div>
           <h1>Modules</h1>
           <p className={styles.subtitle}>
-            Select a module to access its study materials, equations, and tools.
+            Select a module to access its notes and tools.
           </p>
         </div>
       </header>
@@ -73,11 +73,13 @@ export default function Modules() {
             to={`/modules/${mod.slug}`}
             className={styles.card}
           >
-            <div className={styles.cardBody}>
+            <div className={styles.cardTop}>
               <span className={styles.module}>Module {mod.module}</span>
-              <h3>{mod.label}</h3>
-              <p>{mod.description}</p>
+              <span className={styles.icon} aria-hidden="true">{mod.icon}</span>
             </div>
+
+            <h3 className={styles.cardTitle}>{mod.label}</h3>
+            <p className={styles.cardDesc}>{mod.description}</p>
           </Link>
         ))}
       </div>
